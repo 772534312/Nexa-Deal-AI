@@ -1,17 +1,5 @@
-import React, { useState } from 'react';
-import { 
-  X, 
-  Sparkles, 
-  DollarSign, 
-  Layers, 
-  TrendingUp, 
-  Loader2, 
-  CheckCircle2, 
-  ShieldCheck,
-  Globe,
-  GitBranch,
-  AlertCircle
-} from 'lucide-react';
+import React, { useMemo, useState } from 'react';
+import { AlertCircle, CheckCircle2, GitBranch, Globe, Loader2, ShieldCheck, Sparkles, X } from 'lucide-react';
 import { Project, ProjectCategory } from '../types';
 
 interface AddProjectModalProps {
@@ -20,356 +8,185 @@ interface AddProjectModalProps {
   onProjectCreated: (project: Project) => void;
 }
 
-export const AddProjectModal: React.FC<AddProjectModalProps> = ({
-  isOpen,
-  onClose,
-  onProjectCreated,
-}) => {
+const emptyNumber = '';
+
+export const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onProjectCreated }) => {
   const [name, setName] = useState('');
-  const [url, setUrl] = useState('https://');
-  const [repositoryUrl, setRepositoryUrl] = useState('https://github.com/');
+  const [url, setUrl] = useState('');
+  const [repositoryUrl, setRepositoryUrl] = useState('');
   const [tagline, setTagline] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState<ProjectCategory>('SaaS');
-  const [mrr, setMrr] = useState('5500');
-  const [arr, setArr] = useState('66000');
-  const [profit, setProfit] = useState('4200');
-  const [expenses, setExpenses] = useState('1300');
-  const [growth, setGrowth] = useState('52');
-  const [traffic, setTraffic] = useState('24000');
-  const [users, setUsers] = useState('1850');
-  const [churn, setChurn] = useState('1.9');
-  const [askingPrice, setAskingPrice] = useState('68000');
-  const [minimumPrice, setMinimumPrice] = useState('50000');
-  const [targetPrice, setTargetPrice] = useState('60000');
-  const [techStackInput, setTechStackInput] = useState('React, TypeScript, Node.js, PostgreSQL, AWS');
-  const [country, setCountry] = useState('United States');
-  const [targetMarket, setTargetMarket] = useState('Global B2B Developer Tools');
+  const [mrr, setMrr] = useState(emptyNumber);
+  const [arr, setArr] = useState(emptyNumber);
+  const [profit, setProfit] = useState(emptyNumber);
+  const [expenses, setExpenses] = useState(emptyNumber);
+  const [growth, setGrowth] = useState(emptyNumber);
+  const [traffic, setTraffic] = useState(emptyNumber);
+  const [users, setUsers] = useState(emptyNumber);
+  const [churn, setChurn] = useState(emptyNumber);
+  const [askingPrice, setAskingPrice] = useState(emptyNumber);
+  const [minimumPrice, setMinimumPrice] = useState('48000');
+  const [targetPrice, setTargetPrice] = useState(emptyNumber);
+  const [techStackInput, setTechStackInput] = useState('');
+  const [country, setCountry] = useState('');
+  const [targetMarket, setTargetMarket] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  // Live M&A Readiness Estimate
-  const mrrNum = Number(mrr) || 0;
-  const arrNum = Number(arr) || (mrrNum * 12);
-  const financialScore = Math.min(95, Math.max(40, (arrNum > 30000 ? 55 : 25) + (Number(profit) > 0 ? 30 : 10) + (Number(growth) > 20 ? 15 : 5)));
-  const technicalScore = techStackInput.split(',').length >= 3 ? 90 : 65;
-  const overallReadiness = Math.round((financialScore * 0.4) + (technicalScore * 0.3) + 26);
-  const isReady = overallReadiness >= 75;
+  const readiness = useMemo(() => {
+    const required = [name, url, mrr, arr, askingPrice, targetPrice, country, techStackInput];
+    const completed = required.filter(v => String(v).trim().length > 0).length;
+    return Math.round((completed / required.length) * 100);
+  }, [name, url, mrr, arr, askingPrice, targetPrice, country, techStackInput]);
 
   if (!isOpen) return null;
 
+  const numberOrZero = (value: string) => Number(value) || 0;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim()) return;
+    setError('');
+
+    if (!name.trim() || !url.trim() || !mrr.trim() || !arr.trim() || !askingPrice.trim() || !targetPrice.trim()) {
+      setError('Complete the required asset, URL, financial, and pricing fields before submission.');
+      return;
+    }
+
+    const minPrice = Math.max(numberOrZero(minimumPrice), 48000);
+    const target = numberOrZero(targetPrice);
+    const asking = numberOrZero(askingPrice);
+    if (target < minPrice || asking < minPrice) {
+      setError(`Target and asking prices must be at least the platform floor of $${minPrice.toLocaleString()}.`);
+      return;
+    }
 
     setIsSubmitting(true);
-
-    const payload = {
-      name,
-      url,
-      repositoryUrl,
-      tagline: tagline || `High-growth ${category} with audited recurring revenue.`,
-      description: description || `Production-grade ${category} platform with active customer base and positive unit economics.`,
-      category,
-      technologies: techStackInput.split(',').map(t => t.trim()).filter(Boolean),
-      monthlyRevenue: Number(mrr) || 0,
-      annualRevenue: arrNum,
-      mrr: Number(mrr) || 0,
-      arr: arrNum,
-      monthlyProfit: Number(profit) || 0,
-      annualProfit: (Number(profit) || 0) * 12,
-      monthlyExpenses: Number(expenses) || 0,
-      growthRateYoY: Number(growth) || 20,
-      monthlyTraffic: Number(traffic) || 5000,
-      activeUsers: Number(users) || 500,
-      churnRate: Number(churn) || 2.0,
-      askingPrice: Number(askingPrice) || 68000,
-      minimumPrice: Math.max(Number(minimumPrice) || 48000, 48000),
-      targetPrice: Number(targetPrice) || 60000,
-      country,
-      targetMarket,
-      claimsData: [
-        { field: 'mrr', label: `Monthly Revenue ($${Number(mrr).toLocaleString()})`, value: Number(mrr), status: 'Verified', evidenceRef: 'Stripe API Webhook Sync' },
-        { field: 'arr', label: `Annual Revenue ($${arrNum.toLocaleString()})`, value: arrNum, status: 'Verified', evidenceRef: 'Stripe API Webhook Sync' },
-        { field: 'users', label: `Active Seats (${users})`, value: Number(users), status: 'Verified', evidenceRef: 'PostgreSQL DB Query Count' },
-        { field: 'ip', label: '100% Founder IP Ownership', value: '100% Retained', status: 'Verified', evidenceRef: 'Delaware C-Corp Cap Table Document' }
-      ]
-    };
-
     try {
+      const mrrValue = numberOrZero(mrr);
+      const arrValue = numberOrZero(arr);
+      const payload = {
+        name: name.trim(),
+        url: url.trim(),
+        repositoryUrl: repositoryUrl.trim(),
+        tagline: tagline.trim(),
+        description: description.trim(),
+        category,
+        technologies: techStackInput.split(',').map(t => t.trim()).filter(Boolean),
+        monthlyRevenue: mrrValue,
+        annualRevenue: arrValue,
+        mrr: mrrValue,
+        arr: arrValue,
+        monthlyProfit: numberOrZero(profit),
+        annualProfit: numberOrZero(profit) * 12,
+        monthlyExpenses: numberOrZero(expenses),
+        growthRateYoY: numberOrZero(growth),
+        monthlyTraffic: numberOrZero(traffic),
+        activeUsers: numberOrZero(users),
+        churnRate: numberOrZero(churn),
+        askingPrice: asking,
+        minimumPrice: minPrice,
+        targetPrice: target,
+        country: country.trim(),
+        targetMarket: targetMarket.trim(),
+        // These are seller-provided claims. The server must NOT mark them verified
+        // until a real external evidence provider confirms them.
+        claimsData: [
+          { field: 'mrr', label: 'Monthly Recurring Revenue', value: mrrValue, status: 'SELLER_PROVIDED' },
+          { field: 'arr', label: 'Annual Recurring Revenue', value: arrValue, status: 'SELLER_PROVIDED' },
+          { field: 'users', label: 'Active Users / Seats', value: numberOrZero(users), status: 'SELLER_PROVIDED' },
+        ],
+      };
+
       const res = await fetch('/api/projects/onboard', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
       const data = await res.json();
-      if (data.project) {
-        onProjectCreated(data.project);
-        onClose();
-      }
-    } catch (err) {
-      console.error('Failed to create project:', err);
+      if (!res.ok) throw new Error(data.error || data.message || 'Asset submission failed.');
+      if (!data.project) throw new Error('The server did not return a created asset.');
+      onProjectCreated(data.project);
+      onClose();
+    } catch (err: any) {
+      setError(err?.message || 'Unable to submit the asset.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div id="add-project-modal" className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-150 overflow-y-auto">
-      <div className="w-full max-w-3xl rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
-        {/* Header */}
-        <div className="flex items-center justify-between border-b border-slate-800 px-6 py-4 bg-slate-950/60">
-          <div className="flex items-center space-x-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
-              <Sparkles className="h-5 w-5" />
-            </div>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 p-4 backdrop-blur-md overflow-y-auto">
+      <div className="w-full max-w-4xl max-h-[92vh] overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 shadow-2xl">
+        <div className="flex items-center justify-between border-b border-slate-800 bg-slate-950/70 px-6 py-5">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-indigo-500/20 bg-indigo-500/10 text-indigo-400"><Sparkles className="h-5 w-5" /></div>
             <div>
-              <h3 className="text-base font-bold text-white tracking-tight">
-                Real Digital Asset Onboarding & Verification
-              </h3>
-              <p className="text-xs text-slate-400">Automated claims verification, ownership checks & M&A readiness scoring</p>
+              <h2 className="text-base font-bold text-white">Submit a Digital Asset</h2>
+              <p className="text-xs text-slate-400">Seller-provided data only. Verification happens after submission.</p>
             </div>
           </div>
-          <button 
-            id="close-add-modal-btn"
-            onClick={onClose}
-            className="rounded-xl p-1.5 text-slate-400 hover:bg-slate-800 hover:text-white transition-colors"
-          >
-            <X className="h-5 w-5" />
-          </button>
+          <button onClick={onClose} className="rounded-xl p-2 text-slate-400 hover:bg-slate-800 hover:text-white"><X className="h-5 w-5" /></button>
         </div>
 
-        {/* Live Readiness Badge */}
-        <div className="bg-slate-950 px-6 py-2.5 border-b border-slate-800/80 flex items-center justify-between text-xs">
-          <div className="flex items-center space-x-2">
-            <ShieldCheck className="h-4 w-4 text-cyan-400" />
-            <span className="text-slate-300">Live M&A Readiness Estimate:</span>
-            <strong className="font-mono text-cyan-400 text-sm">{overallReadiness}%</strong>
-          </div>
-          <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold border ${
-            isReady ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-amber-500/10 text-amber-400 border-amber-500/20'
-          }`}>
-            {isReady ? 'READY FOR OUTREACH' : 'NEEDS DILIGENCE VERIFICATION'}
-          </span>
+        <div className="flex items-center justify-between border-b border-slate-800 bg-slate-950 px-6 py-3 text-xs">
+          <div className="flex items-center gap-2 text-slate-300"><ShieldCheck className="h-4 w-4 text-cyan-400" /> Submission completeness</div>
+          <span className="font-mono font-bold text-cyan-400">{readiness}%</span>
         </div>
 
-        {/* Form Body */}
-        <form onSubmit={handleSubmit} className="p-6 overflow-y-auto space-y-5 flex-1 bg-slate-900/40">
-          {/* General Specs */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label className="text-xs font-semibold text-slate-300 block mb-1">Asset / Product Name *</label>
-              <input
-                type="text"
-                id="add-proj-name"
-                required
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="e.g. NexusFlow AI or FinScale Cloud"
-                className="w-full rounded-xl bg-slate-950 p-2.5 text-xs text-slate-100 placeholder-slate-500 border border-slate-800 focus:border-indigo-500 focus:outline-none"
-              />
+        <form onSubmit={handleSubmit} className="max-h-[calc(92vh-120px)] overflow-y-auto space-y-6 p-6">
+          {error && <div className="flex gap-2 rounded-xl border border-rose-500/30 bg-rose-500/10 p-3 text-xs text-rose-300"><AlertCircle className="h-4 w-4 shrink-0" />{error}</div>}
+
+          <section className="space-y-4">
+            <SectionTitle title="1. Asset Identity" />
+            <div className="grid gap-4 md:grid-cols-2">
+              <Field label="Asset / Product Name *"><input required value={name} onChange={e => setName(e.target.value)} placeholder="Your product name" /></Field>
+              <Field label="Asset Category"><select value={category} onChange={e => setCategory(e.target.value as ProjectCategory)}><option>SaaS</option><option>AI Platform</option><option>Mobile App</option><option>Web Application</option><option>Marketplace</option><option>E-commerce</option><option>API / Developer Tool</option><option>Digital Business</option><option>Domain + Asset</option></select></Field>
+              <Field label="Production Web Domain URL *" icon={<Globe className="h-3.5 w-3.5" />}><input required type="url" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://example.com" /></Field>
+              <Field label="GitHub Repository URL" icon={<GitBranch className="h-3.5 w-3.5" />}><input type="url" value={repositoryUrl} onChange={e => setRepositoryUrl(e.target.value)} placeholder="https://github.com/org/repo" /></Field>
             </div>
+            <Field label="Value Proposition / Tagline"><input value={tagline} onChange={e => setTagline(e.target.value)} placeholder="What does the asset do?" /></Field>
+            <Field label="Description"><textarea rows={4} value={description} onChange={e => setDescription(e.target.value)} placeholder="Describe the product, customers, business model, and current stage." /></Field>
+          </section>
 
-            <div>
-              <label className="text-xs font-semibold text-slate-300 block mb-1">Asset Category</label>
-              <select
-                id="add-proj-category"
-                value={category}
-                onChange={(e) => setCategory(e.target.value as ProjectCategory)}
-                className="w-full rounded-xl bg-slate-950 p-2.5 text-xs text-slate-100 border border-slate-800 focus:border-indigo-500 focus:outline-none"
-              >
-                <option value="SaaS">SaaS (Software-as-a-Service)</option>
-                <option value="AI Platform">AI Platform / Agentic Copilot</option>
-                <option value="API / Developer Tool">API / Developer Tool</option>
-                <option value="Marketplace">Marketplace / Directory</option>
-                <option value="Mobile App">Mobile App (iOS/Android)</option>
-                <option value="E-Commerce">FinTech / Payment Tool</option>
-              </select>
+          <section className="space-y-4">
+            <SectionTitle title="2. Financial Evidence — Seller Provided" />
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <Field label="Monthly MRR ($) *"><input required type="number" min="0" value={mrr} onChange={e => setMrr(e.target.value)} /></Field>
+              <Field label="Annual ARR ($) *"><input required type="number" min="0" value={arr} onChange={e => setArr(e.target.value)} /></Field>
+              <Field label="Monthly Profit ($)"><input type="number" min="0" value={profit} onChange={e => setProfit(e.target.value)} /></Field>
+              <Field label="Monthly Expenses ($)"><input type="number" min="0" value={expenses} onChange={e => setExpenses(e.target.value)} /></Field>
+              <Field label="YoY Growth (%)"><input type="number" value={growth} onChange={e => setGrowth(e.target.value)} /></Field>
+              <Field label="Monthly Traffic"><input type="number" min="0" value={traffic} onChange={e => setTraffic(e.target.value)} /></Field>
+              <Field label="Active Users / Seats"><input type="number" min="0" value={users} onChange={e => setUsers(e.target.value)} /></Field>
+              <Field label="Monthly Churn (%)"><input type="number" min="0" value={churn} onChange={e => setChurn(e.target.value)} /></Field>
             </div>
-          </div>
+            <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-3 text-xs text-amber-200">These figures are recorded as <strong>SELLER_PROVIDED</strong>. Nexa must not display them as verified until Stripe, analytics, database, or other evidence is actually checked.</div>
+          </section>
 
-          {/* URLs for Domain & Repo Verification */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label className="text-xs font-semibold text-slate-300 flex items-center space-x-1.5 mb-1">
-                <Globe className="h-3.5 w-3.5 text-indigo-400" />
-                <span>Production Web Domain URL *</span>
-              </label>
-              <input
-                type="text"
-                required
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-                placeholder="https://myplatform.io"
-                className="w-full rounded-xl bg-slate-950 p-2.5 text-xs text-slate-100 placeholder-slate-500 border border-slate-800 focus:border-indigo-500 focus:outline-none font-mono"
-              />
+          <section className="space-y-4">
+            <SectionTitle title="3. Pricing & Deal Guardrails" />
+            <div className="grid gap-4 md:grid-cols-3">
+              <Field label="Minimum Floor Price ($)"><input type="number" min="48000" value={minimumPrice} onChange={e => setMinimumPrice(e.target.value)} /></Field>
+              <Field label="Target Closing Price ($) *"><input required type="number" min="48000" value={targetPrice} onChange={e => setTargetPrice(e.target.value)} /></Field>
+              <Field label="Public Asking Price ($) *"><input required type="number" min="48000" value={askingPrice} onChange={e => setAskingPrice(e.target.value)} /></Field>
             </div>
+            <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-3 text-xs text-slate-300">Platform invariant: no offer, concession, or negotiated amount may go below <strong className="text-rose-300">$48,000</strong>.</div>
+          </section>
 
-            <div>
-              <label className="text-xs font-semibold text-slate-300 flex items-center space-x-1.5 mb-1">
-                <GitBranch className="h-3.5 w-3.5 text-cyan-400" />
-                <span>GitHub Repository URL</span>
-              </label>
-              <input
-                type="text"
-                value={repositoryUrl}
-                onChange={(e) => setRepositoryUrl(e.target.value)}
-                placeholder="https://github.com/myorg/myrepo"
-                className="w-full rounded-xl bg-slate-950 p-2.5 text-xs text-slate-100 placeholder-slate-500 border border-slate-800 focus:border-indigo-500 focus:outline-none font-mono"
-              />
+          <section className="space-y-4">
+            <SectionTitle title="4. Technology & Market" />
+            <div className="grid gap-4 md:grid-cols-2">
+              <Field label="Technology Stack"><input value={techStackInput} onChange={e => setTechStackInput(e.target.value)} placeholder="React, Node.js, PostgreSQL" /></Field>
+              <Field label="Country"><input value={country} onChange={e => setCountry(e.target.value)} placeholder="Country of the business" /></Field>
             </div>
-          </div>
+            <Field label="Target Market"><input value={targetMarket} onChange={e => setTargetMarket(e.target.value)} placeholder="Who buys this product?" /></Field>
+          </section>
 
-          <div>
-            <label className="text-xs font-semibold text-slate-300 block mb-1">Value Proposition / Tagline</label>
-            <input
-              type="text"
-              id="add-proj-tagline"
-              value={tagline}
-              onChange={(e) => setTagline(e.target.value)}
-              placeholder="e.g. Automated CI/CD performance intelligence engine for engineering teams"
-              className="w-full rounded-xl bg-slate-950 p-2.5 text-xs text-slate-100 placeholder-slate-500 border border-slate-800 focus:border-indigo-500 focus:outline-none"
-            />
-          </div>
-
-          {/* Financials Bento */}
-          <div className="rounded-2xl bg-slate-950/70 p-4 border border-slate-800 space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-300 block">
-              Financial Metrics & Unit Economics (USD)
-            </span>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div>
-                <label className="text-[10px] uppercase font-semibold text-slate-400 block mb-1">Monthly MRR ($)</label>
-                <input
-                  type="number"
-                  id="add-proj-mrr"
-                  value={mrr}
-                  onChange={(e) => {
-                    setMrr(e.target.value);
-                    setArr(String(Number(e.target.value) * 12));
-                  }}
-                  className="w-full rounded-lg bg-slate-900 p-2 text-xs text-slate-100 border border-slate-800 font-mono"
-                />
-              </div>
-
-              <div>
-                <label className="text-[10px] uppercase font-semibold text-slate-400 block mb-1">Annual ARR ($)</label>
-                <input
-                  type="number"
-                  id="add-proj-arr"
-                  value={arr}
-                  onChange={(e) => setArr(e.target.value)}
-                  className="w-full rounded-lg bg-slate-900 p-2 text-xs text-slate-100 border border-slate-800 font-mono"
-                />
-              </div>
-
-              <div>
-                <label className="text-[10px] uppercase font-semibold text-slate-400 block mb-1">Monthly Profit ($)</label>
-                <input
-                  type="number"
-                  id="add-proj-profit"
-                  value={profit}
-                  onChange={(e) => setProfit(e.target.value)}
-                  className="w-full rounded-lg bg-slate-900 p-2 text-xs text-slate-100 border border-slate-800 font-mono"
-                />
-              </div>
-
-              <div>
-                <label className="text-[10px] uppercase font-semibold text-slate-400 block mb-1">YoY Growth %</label>
-                <input
-                  type="number"
-                  id="add-proj-growth"
-                  value={growth}
-                  onChange={(e) => setGrowth(e.target.value)}
-                  className="w-full rounded-lg bg-slate-900 p-2 text-xs text-emerald-400 border border-slate-800 font-mono"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Pricing Guardrails with $48k Minimum Policy Floor */}
-          <div className="rounded-2xl bg-slate-950/70 p-4 border border-slate-800 space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
-                Autonomous Negotiation Pricing Boundaries
-              </span>
-              <span className="text-[10px] text-rose-400 font-semibold">Absolute Floor: $48,000</span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <div>
-                <label className="text-[10px] uppercase font-semibold text-slate-400 block mb-1">Minimum Floor Price</label>
-                <input
-                  type="number"
-                  min="48000"
-                  id="add-proj-min-price"
-                  value={minimumPrice}
-                  onChange={(e) => setMinimumPrice(e.target.value)}
-                  className="w-full rounded-lg bg-slate-900 p-2 text-xs text-amber-400 border border-slate-800 font-mono"
-                />
-              </div>
-
-              <div>
-                <label className="text-[10px] uppercase font-semibold text-slate-400 block mb-1">Target Closing Price</label>
-                <input
-                  type="number"
-                  id="add-proj-target-price"
-                  value={targetPrice}
-                  onChange={(e) => setTargetPrice(e.target.value)}
-                  className="w-full rounded-lg bg-slate-900 p-2 text-xs text-indigo-400 border border-slate-800 font-mono"
-                />
-              </div>
-
-              <div>
-                <label className="text-[10px] uppercase font-semibold text-slate-400 block mb-1">Public Asking Price</label>
-                <input
-                  type="number"
-                  id="add-proj-asking-price"
-                  value={askingPrice}
-                  onChange={(e) => setAskingPrice(e.target.value)}
-                  className="w-full rounded-lg bg-slate-900 p-2 text-xs text-emerald-400 border border-slate-800 font-mono"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Tech Stack */}
-          <div>
-            <label className="text-xs font-semibold text-slate-300 block mb-1">Tech Stack & Infrastructure</label>
-            <input
-              type="text"
-              id="add-proj-tech-stack"
-              value={techStackInput}
-              onChange={(e) => setTechStackInput(e.target.value)}
-              className="w-full rounded-xl bg-slate-950 p-2.5 text-xs text-slate-100 border border-slate-800 focus:border-indigo-500 focus:outline-none font-mono"
-            />
-          </div>
-
-          {/* Footer Submit */}
-          <div className="pt-3 border-t border-slate-800 flex items-center justify-end space-x-3">
-            <button
-              type="button"
-              id="cancel-add-proj-btn"
-              onClick={onClose}
-              className="rounded-xl px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              id="submit-add-proj-btn"
-              disabled={isSubmitting || !name.trim()}
-              className="flex items-center space-x-1.5 rounded-xl bg-indigo-600 px-5 py-2.5 text-xs font-bold text-white shadow-lg shadow-indigo-600/30 hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            >
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                  <span>Onboarding Real Asset & Scoring Diligence...</span>
-                </>
-              ) : (
-                <>
-                  <Sparkles className="h-4 w-4" />
-                  <span>Onboard & Initialize Autonomous Brokerage</span>
-                </>
-              )}
+          <div className="flex flex-col gap-3 border-t border-slate-800 pt-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-2 text-xs text-slate-400"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Verification queue will start after submission.</div>
+            <button disabled={isSubmitting} type="submit" className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-xs font-bold text-white hover:bg-indigo-500 disabled:cursor-not-allowed disabled:opacity-60">
+              {isSubmitting ? <><Loader2 className="h-4 w-4 animate-spin" /> Submitting…</> : 'Submit Asset for Verification'}
             </button>
           </div>
         </form>
@@ -377,3 +194,11 @@ export const AddProjectModal: React.FC<AddProjectModalProps> = ({
     </div>
   );
 };
+
+function SectionTitle({ title }: { title: string }) {
+  return <div className="flex items-center gap-2 border-b border-slate-800 pb-2"><div className="h-1.5 w-1.5 rounded-full bg-indigo-400" /><h3 className="text-xs font-bold uppercase tracking-wider text-slate-300">{title}</h3></div>;
+}
+
+function Field({ label, children, icon }: { label: string; children: React.ReactNode; icon?: React.ReactNode }) {
+  return <label className="block space-y-1.5 text-xs font-semibold text-slate-300"><span className="flex items-center gap-1.5">{icon}{label}</span>{React.cloneElement(children as React.ReactElement<any>, { className: 'w-full rounded-xl border border-slate-800 bg-slate-950 p-2.5 text-xs text-slate-100 outline-none focus:border-indigo-500' })}</label>;
+}
