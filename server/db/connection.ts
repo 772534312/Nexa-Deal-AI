@@ -5,7 +5,6 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-// Persistent storage location for durable transactions
 const PERSISTENT_DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), '.data');
 const PERSISTENT_DB_FILE = path.join(PERSISTENT_DATA_DIR, 'nexa_production_db.json');
 const PERSISTENT_WAL_FILE = path.join(PERSISTENT_DATA_DIR, 'nexa_wal.log');
@@ -47,8 +46,6 @@ export function getPostgresConfig(): PoolConfig | null {
       max: parseInt(process.env.PG_MAX_CONNECTIONS || '10', 10),
       idleTimeoutMillis: parseInt(process.env.PG_IDLE_TIMEOUT || '30000', 10),
       connectionTimeoutMillis: parseInt(process.env.PG_CONN_TIMEOUT || '10000', 10),
-      // Neon/Render already provides TLS through DATABASE_URL. Explicitly
-      // require certificate validation when a CA bundle is supplied.
       ssl: process.env.NODE_ENV === 'production' && process.env.PG_CA_CERT
         ? { ca: process.env.PG_CA_CERT, rejectUnauthorized: true }
         : process.env.NODE_ENV === 'production'
@@ -109,10 +106,8 @@ export async function testDatabaseConnectivity(): Promise<{ connected: boolean; 
 }
 
 /**
- * Production must never expose the hard-coded demo transaction graph as if it
- * were seller-owned inventory. Seed records are kept only for local/demo use.
- * The comparison is ID-based so persisted seed records are removed after a
- * restart or redeploy as well.
+ * Production must never expose the hard-coded demo transaction graph as seller-owned inventory.
+ * Seed records are retained only for local/demo use and are removed by ID on production startup.
  */
 function isolateSeedRecords<T extends Record<string, any>>(state: T, seedState: T): T {
   const result: any = { ...state };
@@ -147,20 +142,42 @@ function isolateSeedRecords<T extends Record<string, any>>(state: T, seedState: 
     }
   }
 
-  // Scalar seed state must not put a fresh production instance into LIVE mode.
-  // A new installation starts in a controlled state until the owner explicitly
-  // completes launch checks and enables LIVE mode.
   if (result.commercialMode === 'LIVE') {
     result.commercialMode = 'CONTROLLED_FIRST_TRANSACTION';
   }
 
-  // This entry was itself demo data. A real suppression list is populated only
-  // by actual buyer opt-out events.
   if (Array.isArray(result.emailSuppressionList)) {
     const seedSuppression = new Set(source.emailSuppressionList || []);
     result.emailSuppressionList = result.emailSuppressionList.filter(
       (email: any) => !seedSuppression.has(email)
     );
+  }
+
+  // Production still needs a neutral workspace shell so the application can
+  // open and accept the first real seller submission. This is not a project,
+  // buyer, deal, financial claim, or fake identity.
+  if (result.workspaces.length === 0) {
+    result.workspaces = [{
+      id: 'ws-1',
+      name: 'My Workspace',
+      slug: 'my-workspace',
+      plan: 'Free',
+      membersCount: 1,
+      activeProjectsCount: 0,
+      monthlyAiBudget: 0,
+      usedAiBudget: 0,
+      createdAt: new Date().toISOString(),
+    }];
+  }
+
+  if (result.users.length === 0) {
+    result.users = [{
+      id: 'usr-1',
+      name: 'Workspace Owner',
+      email: 'owner@local.invalid',
+      role: 'Owner',
+      workspaceId: result.workspaces[0].id,
+    }];
   }
 
   return result as T;
