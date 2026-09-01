@@ -31,3 +31,24 @@
   background: rgba(99, 102, 241, 0.7);
 }
 
+/*
+ * Navigation consolidation
+ * Navbar.tsx is now the single workflow navigation surface.
+ * App.tsx still contains the previous legacy sidebar/mobile selector;
+ * hide those legacy surfaces without touching routing or business logic.
+ */
+.flex-1.flex.mx-auto.w-full.max-w-7xl.px-4.sm\:px-6.py-6.gap-6 > aside {
+  display: none !important;
+}
+
+.flex-1.flex.mx-auto.w-full.max-w-7xl.px-4.sm\:px-6.py-6.gap-6 > .lg\:hidden {
+  display: none !important;
+}
+
+.flex-1.flex.mx-auto.w-full.max-w-7xl.px-4.sm\:px-6.py-6.gap-6 {
+  display: block;
+}
+
+.flex-1.flex.mx-auto.w-full.max-w-7xl.px-4.sm\:px-6.py-6.gap-6 > main {
+  width: 100%;
+}
