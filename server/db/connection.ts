@@ -19,7 +19,6 @@ if (!fs.existsSync(PERSISTENT_DATA_DIR)) {
   }
 }
 
-// Global connection pool cache for hot reload safety
 declare global {
   var _postgresPool: Pool | undefined;
 }
@@ -70,13 +69,10 @@ export function getPostgresConfig(): PoolConfig | null {
 
 export function getPool(): Pool | null {
   const config = getPostgresConfig();
-  if (!config) {
-    return null;
-  }
+  if (!config) return null;
 
   if (!global._postgresPool) {
     global._postgresPool = new Pool(config);
-
     global._postgresPool.on('error', (err) => {
       console.error('[PostgreSQL Pool] Unexpected error on idle client:', err.message);
     });
@@ -88,13 +84,9 @@ export function getPool(): Pool | null {
 export async function testDatabaseConnectivity(): Promise<{ connected: boolean; latencyMs: number; error?: string }> {
   const pool = getPool();
   if (!pool) {
-    // Durable persistent store check
     const start = Date.now();
     const isWritable = fs.existsSync(PERSISTENT_DATA_DIR);
-    return {
-      connected: isWritable,
-      latencyMs: Date.now() - start,
-    };
+    return { connected: isWritable, latencyMs: Date.now() - start };
   }
 
   const start = Date.now();
@@ -102,49 +94,77 @@ export async function testDatabaseConnectivity(): Promise<{ connected: boolean; 
     const client = await pool.connect();
     try {
       await client.query('SELECT 1 as health_check');
-      return {
-        connected: true,
-        latencyMs: Date.now() - start,
-      };
+      return { connected: true, latencyMs: Date.now() - start };
     } finally {
       client.release();
     }
   } catch (err: any) {
-    return {
-      connected: false,
-      latencyMs: Date.now() - start,
-      error: err.message,
-    };
+    return { connected: false, latencyMs: Date.now() - start, error: err.message };
   }
 }
 
+/**
+ * Production must never expose the hard-coded demo transaction graph as if it
+ * were seller-owned inventory. We keep the seed graph available for local
+ * development/tests, but remove records that originate from the seed state
+ * when running on Render/production. The comparison is ID-based so persisted
+ * seed records are removed as well after a restart or redeploy.
+ */
+function isolateSeedRecords<T extends Record<string, any>>(state: T, seedState: T): T {
+  const result: any = { ...state };
+  const source: any = seedState;
+
+  for (const key of Object.keys(result)) {
+    const current = result[key];
+    const seed = source[key];
+
+    if (Array.isArray(current) && Array.isArray(seed)) {
+      const seedIds = new Set(seed.filter((v: any) => v && typeof v.id === 'string').map((v: any) => v.id));
+      if (seedIds.size > 0) {
+        result[key] = current.filter((v: any) => !v || typeof v.id !== 'string' || !seedIds.has(v.id));
+      }
+      continue;
+    }
+
+    if (current && typeof current === 'object' && !Array.isArray(current) && seed && typeof seed === 'object' && !Array.isArray(seed)) {
+      // Seeded transaction maps are keyed by seed deal/project IDs.
+      if (key === 'transactionChecklists' || key === 'handoverPlans' || key === 'agentMemory') {
+        const seedKeys = new Set(Object.keys(seed));
+        result[key] = Object.fromEntries(Object.entries(current).filter(([k]) => !seedKeys.has(k)));
+      }
+    }
+  }
+
+  return result as T;
+}
+
 export function loadDurableDatabaseState<T>(defaultState: T): T {
+  const production = process.env.NODE_ENV === 'production' || process.env.RENDER === 'true';
+  const showSeedData = process.env.NEXA_SHOW_SEED_DATA === 'true';
+
   try {
     if (fs.existsSync(PERSISTENT_DB_FILE)) {
       const content = fs.readFileSync(PERSISTENT_DB_FILE, 'utf-8');
       const parsed = JSON.parse(content);
-      return { ...defaultState, ...parsed };
+      const merged = { ...defaultState, ...parsed } as T;
+      return production && !showSeedData ? isolateSeedRecords(merged, defaultState) : merged;
     }
   } catch (err) {
     console.error('[Persistence Engine] Error loading persistent state from disk:', err);
   }
-  return defaultState;
+
+  return production && !showSeedData ? isolateSeedRecords(defaultState, defaultState) : defaultState;
 }
 
 export function saveDurableDatabaseState(state: any): void {
   try {
-    if (!fs.existsSync(PERSISTENT_DATA_DIR)) {
-      fs.mkdirSync(PERSISTENT_DATA_DIR, { recursive: true });
-    }
+    if (!fs.existsSync(PERSISTENT_DATA_DIR)) fs.mkdirSync(PERSISTENT_DATA_DIR, { recursive: true });
 
     const tempFile = `${PERSISTENT_DB_FILE}.${Date.now()}.${Math.random().toString(36).substring(2, 6)}.tmp`;
     const serialized = JSON.stringify(state, null, 2);
-    
-    // Atomic write pattern: Write to temp file then rename
     fs.writeFileSync(tempFile, serialized, 'utf-8');
     fs.renameSync(tempFile, PERSISTENT_DB_FILE);
 
-    // Append to Write-Ahead Log for durability tracking
     const walEntry = JSON.stringify({
       timestamp: new Date().toISOString(),
       action: 'SNAPSHOT_SYNC',
