@@ -27,8 +27,8 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
-      - name: Typecheck
-        run: npm run lint
-
-      - name: Production build
+      - name: Production build and server hardening
         run: npm run build
+
+      - name: Typecheck hardened source
+        run: npm run lint
