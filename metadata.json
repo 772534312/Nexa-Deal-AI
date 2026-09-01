@@ -1,0 +1,6 @@
+{
+  "name": "Nexa Deal AI",
+  "description": "Autonomous AI Digital Asset Brokerage & Acquisition Platform for selling digital businesses, SaaS, websites, and applications with intelligent multi-agent deal execution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
