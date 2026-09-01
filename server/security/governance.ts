@@ -10,21 +10,17 @@ export interface PriceFloorValidationResult {
 
 /**
  * Enforces the non-negotiable $48,000 minimum price floor invariant.
- * Rejects NaN, Infinity, negative numbers, undefined/null, and string coercion exploits.
+ * Rejects NaN, Infinity, negative numbers, undefined/null, and invalid coercion.
  */
 export function validateMinimumPriceFloor(value: any): PriceFloorValidationResult {
-  if (value === null || value === undefined) {
-    return { isValid: false, numericAmount: 0, reason: 'Price value cannot be null or undefined.' };
+  if (value === null || value === undefined || value === '') {
+    return { isValid: false, numericAmount: 0, reason: 'Price value is required.' };
   }
 
   const num = typeof value === 'number' ? value : Number(value);
 
-  if (isNaN(num)) {
-    return { isValid: false, numericAmount: 0, reason: 'Price value is not a valid number (NaN).' };
-  }
-
-  if (!isFinite(num)) {
-    return { isValid: false, numericAmount: 0, reason: 'Price value cannot be Infinity.' };
+  if (!Number.isFinite(num)) {
+    return { isValid: false, numericAmount: 0, reason: 'Price value must be a finite number.' };
   }
 
   if (num <= 0) {
@@ -43,7 +39,8 @@ export function validateMinimumPriceFloor(value: any): PriceFloorValidationResul
 }
 
 /**
- * Prompt injection protection against unauthorized policy manipulation or secret extraction
+ * Prompt injection protection against unauthorized policy manipulation or secret extraction.
+ * This is a defense-in-depth filter, not a substitute for authorization boundaries.
  */
 export function detectPromptInjection(text: string): { isMalicious: boolean; pattern?: string } {
   if (!text || typeof text !== 'string') return { isMalicious: false };
@@ -75,7 +72,7 @@ export function detectPromptInjection(text: string): { isMalicious: boolean; pat
 }
 
 /**
- * Tenant isolation check: ensure requested workspace matches user's authenticated workspace membership
+ * Tenant isolation check: requested workspace must match the authenticated user's membership.
  */
 export function validateTenantAccess(userWorkspaceId: string, requestedWorkspaceId: string): boolean {
   if (!userWorkspaceId || !requestedWorkspaceId) return false;
@@ -83,24 +80,33 @@ export function validateTenantAccess(userWorkspaceId: string, requestedWorkspace
 }
 
 /**
- * HMAC signature verification with replay protection
+ * Verify an Escrow-style SHA-256 HMAC signature.
+ * Accepts both raw hex digests and the conventional `sha256=<hex>` form.
+ * Uses a constant-time comparison and never falls back to a hard-coded test value.
  */
 export function verifyWebhookSignature(payloadRaw: string, signature: string, secret: string): boolean {
-  if (!signature || !secret) return false;
-  try {
-    const expectedSignature = crypto.createHmac('sha256', secret).update(payloadRaw).digest('hex');
-    const signatureBuffer = Buffer.from(signature);
-    const expectedBuffer = Buffer.from(expectedSignature);
+  if (!payloadRaw || !signature || !secret) return false;
 
-    if (signatureBuffer.length !== expectedBuffer.length) return false;
-    return crypto.timingSafeEqual(signatureBuffer, expectedBuffer);
+  try {
+    const normalizedSignature = signature.trim().replace(/^sha256=/i, '').toLowerCase();
+    if (!/^[a-f0-9]{64}$/.test(normalizedSignature)) return false;
+
+    const expectedSignature = crypto
+      .createHmac('sha256', secret)
+      .update(payloadRaw, 'utf8')
+      .digest('hex');
+
+    const actualBuffer = Buffer.from(normalizedSignature, 'hex');
+    const expectedBuffer = Buffer.from(expectedSignature, 'hex');
+
+    return actualBuffer.length === expectedBuffer.length && crypto.timingSafeEqual(actualBuffer, expectedBuffer);
   } catch {
     return false;
   }
 }
 
 /**
- * DAG Cycle Detection using Kahn's algorithm
+ * DAG Cycle Detection using Kahn's algorithm.
  */
 export function detectDagCycle(tasks: Array<{ id: string; dependencies?: string[] }>): boolean {
   const graph = new Map<string, string[]>();
@@ -134,9 +140,7 @@ export function detectDagCycle(tasks: Array<{ id: string; dependencies?: string[
     for (const neighbor of neighbors) {
       const nextDeg = (inDegree.get(neighbor) || 0) - 1;
       inDegree.set(neighbor, nextDeg);
-      if (nextDeg === 0) {
-        queue.push(neighbor);
-      }
+      if (nextDeg === 0) queue.push(neighbor);
     }
   }
 
