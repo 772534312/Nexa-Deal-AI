@@ -8,46 +8,13 @@ import {
   HandoverMilestoneDay, TransactionArchive, BrokerageEconomics, LaunchChecklistItem,
   ClaimVerificationItem, MaReadinessReport
 } from '../src/types';
+import { DatabaseState as PersistentDatabaseState, WebhookEventRecord, UserSessionRecord, MigrationRecord } from './db/types';
+import { NexaRepository } from './db/repository';
 
-export interface DatabaseState {
-  commercialMode: CommercialMode;
-  workspaces: Workspace[];
-  users: User[];
-  projects: Project[];
-  buyers: Buyer[];
-  matches: BuyerMatch[];
-  campaigns: Campaign[];
-  emails: EmailMessage[];
-  deals: Deal[];
-  offers: Offer[];
-  approvals: ApprovalItem[];
-  vdrFolders: VdrFolder[];
-  vdrFiles: VdrFile[];
-  vdrAccessLogs: VdrAccessLog[];
-  ndas: NDA[];
-  dueDiligence: DueDiligenceItem[];
-  agents: Agent[];
-  missions: Mission[];
-  riskEvents: RiskEvent[];
-  auditLogs: AuditLog[];
-  aiUsages: AiUsage[];
-  closingMilestones: ClosingMilestone[];
-  sellerPolicies: SellerPolicy[];
-  integrations: IntegrationServiceStatus[];
-  handoverSecrets: AssetHandoverSecret[];
-  tools: ToolDefinition[];
-  sellerVerifications: SellerVerification[];
-  transactionChecklists: Record<string, TransactionChecklistItem[]>;
-  handoverPlans: Record<string, HandoverMilestoneDay[]>;
-  transactionArchives: TransactionArchive[];
-  brokerageEconomics: BrokerageEconomics[];
-  launchChecklists: LaunchChecklistItem[];
-  emailSuppressionList: string[];
-  agentMemory: Record<string, any>;
-}
+export type DatabaseState = PersistentDatabaseState;
 
 // Initial robust seed data
-export const db: DatabaseState = {
+export const initialSeedData: DatabaseState = {
   commercialMode: 'LIVE',
   workspaces: [
     {
@@ -2005,5 +1972,19 @@ export const db: DatabaseState = {
   agentMemory: {
     'proj-1_valuation_anchor': { min: 48000, target: 56000, asking: 65000 },
     'buyer-1_preferred_terms': { upfrontCashOnly: true, diligenceDays: 21 },
-  }
+  },
+  sessions: [],
+  webhookEvents: [],
+  migrations: [],
 };
+
+// Singleton persistent repository
+export const repository = new NexaRepository(initialSeedData);
+
+// Active durable state reference with automatic persistence synchronization
+export const db: DatabaseState = repository.rawState;
+
+export function persistDb(): void {
+  repository.persist();
+}
+

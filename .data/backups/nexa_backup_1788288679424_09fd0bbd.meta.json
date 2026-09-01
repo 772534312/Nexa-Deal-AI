@@ -1,0 +1,14 @@
+{
+  "backupId": "nexa_backup_1788288679424_09fd0bbd",
+  "createdAt": "2026-09-01T18:51:19.426Z",
+  "sizeBytes": 116099,
+  "sha256Checksum": "69ac266f12f5784bac737eb509708319ab19f709a5dcb148471f9f8c9c7667f7",
+  "recordCounts": {
+    "workspaces": 2,
+    "projects": 9,
+    "deals": 3,
+    "offers": 14,
+    "auditLogs": 6,
+    "vdrFiles": 4
+  }
+}

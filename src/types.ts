@@ -352,6 +352,7 @@ export interface Deal {
   assignedAgent: string;
   healthScore?: DealHealthScore;
   probabilityBreakdown?: DealClosingProbability;
+  archiveHash?: string;
   lastActivityAt: string;
   createdAt: string;
   updatedAt: string;
@@ -432,6 +433,7 @@ export interface NDA {
   status: 'REQUESTED' | 'DRAFTED' | 'SENT' | 'SIGNED' | 'EXPIRED';
   terms: string;
   documentUrl?: string;
+  sha256Hash?: string;
   requestedAt: string;
   signedAt?: string;
   expiresAt: string;
@@ -573,17 +575,24 @@ export interface SellerPolicy {
 
 export interface AssetHandoverSecret {
   id: string;
-  workspaceId: string;
+  workspaceId?: string;
   projectId: string;
   title: string;
-  category: 'Repository Access' | 'Cloud Provider Root' | 'DNS Registrar' | 'Database Credentials' | 'Stripe Account Transfer' | 'API Keys & Secrets';
-  description: string;
+  category: 'Repository Access' | 'Cloud Provider Root' | 'DNS Registrar' | 'Database Credentials' | 'Stripe Account Transfer' | 'API Keys & Secrets' | 'Database' | 'Domain' | 'Hosting' | 'Repository' | 'Payment';
+  description?: string;
   isRevealed: boolean;
-  maskedValue: string;
+  maskedValue?: string;
   secretValue?: string;
+  encryptedSecret?: string;
+  oneTimeTokenHash?: string;
+  expiresAt?: string;
+  revealedAt?: string;
+  revealedBy?: string;
+  isLocked?: boolean;
+  revealed?: boolean;
   lastAccessedAt?: string;
-  accessCount: number;
-  verifiedByBuyer: boolean;
+  accessCount?: number;
+  verifiedByBuyer?: boolean;
   verifiedAt?: string;
 }
 
@@ -886,6 +895,7 @@ export interface TransactionArchive {
   buyerName: string;
   sellerName: string;
   finalPrice: number;
+  finalAmount?: number;
   currency: string;
   closingDate: string;
   offersTimeline: Offer[];
@@ -896,6 +906,8 @@ export interface TransactionArchive {
   handoverSecretsCount: number;
   auditLogsCount: number;
   sha256ProofHash: string;
+  sha256Hash?: string;
+  canonicalState?: string;
   isReadOnly: true;
 }
 
@@ -904,6 +916,7 @@ export interface BrokerageEconomics {
   dealId?: string;
   projectId?: string;
   dealValue: number;
+  grossDealValue?: number;
   feeModel: BrokerageFeeModel;
   feePercentage: number;
   minimumFee: number;
@@ -915,8 +928,11 @@ export interface BrokerageEconomics {
   aiCost: number;
   emailCost: number;
   infraCost: number;
+  totalOperatingCost?: number;
   netMargin: number;
+  netBrokerageProfit?: number;
   netMarginPercentage: number;
+  netMarginPercent?: number;
   status: 'ESTIMATED' | 'ESCROW_HELD' | 'DISBURSED';
 }
 

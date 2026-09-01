@@ -1,0 +1,3402 @@
+{
+  "commercialMode": "LIVE",
+  "workspaces": [
+    {
+      "id": "ws-1",
+      "name": "Apex Digital Ventures",
+      "slug": "apex-ventures",
+      "plan": "Enterprise",
+      "membersCount": 4,
+      "activeProjectsCount": 3,
+      "monthlyAiBudget": 500,
+      "usedAiBudget": 42.8,
+      "createdAt": "2026-01-15T08:00:00.000Z"
+    },
+    {
+      "id": "ws-2",
+      "name": "HyperScale SaaS Studio",
+      "slug": "hyperscale-studio",
+      "plan": "Pro",
+      "membersCount": 2,
+      "activeProjectsCount": 1,
+      "monthlyAiBudget": 200,
+      "usedAiBudget": 18.5,
+      "createdAt": "2026-02-01T10:00:00.000Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-1",
+      "name": "Farhan Al-Mansoor",
+      "email": "founder@apexventures.io",
+      "role": "Owner",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "workspaceId": "ws-1"
+    },
+    {
+      "id": "usr-2",
+      "name": "Sarah Jenkins",
+      "email": "sarah.mna@apexventures.io",
+      "role": "Manager",
+      "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
+      "workspaceId": "ws-1"
+    },
+    {
+      "id": "usr-3",
+      "name": "David Chen",
+      "email": "david@apexventures.io",
+      "role": "Member",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "workspaceId": "ws-1"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-test-1788288679315",
+      "workspaceId": "ws-1",
+      "name": "Persistence Verification Asset",
+      "tagline": "Automated test asset",
+      "description": "Verifies data survives restart",
+      "category": "SaaS",
+      "askingPrice": 75000,
+      "minimumPrice": 50000,
+      "targetPrice": 65000,
+      "currency": "USD",
+      "status": "active",
+      "visibility": "Public",
+      "technologies": [
+        "TypeScript"
+      ],
+      "businessModel": "Subscription",
+      "country": "United States",
+      "targetMarket": "SaaS Developers",
+      "financials": {
+        "monthlyRevenue": 6200,
+        "mrr": 6200,
+        "arr": 74400,
+        "annualRevenue": 74400,
+        "monthlyExpenses": 1700,
+        "monthlyProfit": 4500,
+        "annualProfit": 54000,
+        "growthRateYoY": 50,
+        "churnRate": 1.5,
+        "activeUsers": 1000,
+        "monthlyTraffic": 25000
+      },
+      "scores": {
+        "technologyScore": 90,
+        "marketScore": 90,
+        "businessScore": 90,
+        "growthScore": 90,
+        "revenueScore": 90,
+        "strategicScore": 90,
+        "buyerAppeal": 90,
+        "overallScore": 90
+      },
+      "assets": [],
+      "url": "https://test.dev",
+      "repositoryUrl": "https://github.com/apex-ventures/test",
+      "createdAt": "2026-09-01T18:51:19.315Z",
+      "updatedAt": "2026-09-01T18:51:19.315Z"
+    },
+    {
+      "id": "proj-test-1788287948572",
+      "workspaceId": "ws-1",
+      "name": "Persistence Verification Asset",
+      "tagline": "Automated test asset",
+      "description": "Verifies data survives restart",
+      "category": "SaaS",
+      "askingPrice": 75000,
+      "minimumPrice": 50000,
+      "targetPrice": 65000,
+      "currency": "USD",
+      "status": "active",
+      "visibility": "Public",
+      "technologies": [
+        "TypeScript"
+      ],
+      "businessModel": "Subscription",
+      "country": "United States",
+      "targetMarket": "SaaS Developers",
+      "financials": {
+        "monthlyRevenue": 6200,
+        "mrr": 6200,
+        "arr": 74400,
+        "annualRevenue": 74400,
+        "monthlyExpenses": 1700,
+        "monthlyProfit": 4500,
+        "annualProfit": 54000,
+        "growthRateYoY": 50,
+        "churnRate": 1.5,
+        "activeUsers": 1000,
+        "monthlyTraffic": 25000
+      },
+      "scores": {
+        "technologyScore": 90,
+        "marketScore": 90,
+        "businessScore": 90,
+        "growthScore": 90,
+        "revenueScore": 90,
+        "strategicScore": 90,
+        "buyerAppeal": 90,
+        "overallScore": 90
+      },
+      "assets": [],
+      "url": "https://test.dev",
+      "repositoryUrl": "https://github.com/apex-ventures/test",
+      "createdAt": "2026-09-01T18:39:08.572Z",
+      "updatedAt": "2026-09-01T18:39:08.572Z"
+    },
+    {
+      "id": "proj-test-1788287781914",
+      "workspaceId": "ws-1",
+      "name": "Persistence Verification Asset",
+      "tagline": "Automated test asset",
+      "description": "Verifies data survives restart",
+      "category": "SaaS",
+      "askingPrice": 75000,
+      "minimumPrice": 50000,
+      "targetPrice": 65000,
+      "currency": "USD",
+      "status": "active",
+      "visibility": "Public",
+      "technologies": [
+        "TypeScript"
+      ],
+      "businessModel": "Subscription",
+      "financials": {
+        "monthlyRevenue": 6200,
+        "mrr": 6200,
+        "arr": 74400,
+        "annualRevenue": 74400,
+        "monthlyProfit": 4500,
+        "annualProfit": 54000,
+        "growthRateYoY": 50,
+        "churnRate": 1.5,
+        "activeUsers": 1000,
+        "monthlyTraffic": 25000
+      },
+      "scores": {
+        "technologyScore": 90,
+        "marketScore": 90,
+        "businessScore": 90,
+        "growthScore": 90,
+        "revenueScore": 90,
+        "strategicScore": 90,
+        "buyerAppeal": 90,
+        "overallScore": 90
+      }
+    },
+    {
+      "id": "proj-test-1788287769078",
+      "workspaceId": "ws-1",
+      "name": "Persistence Verification Asset",
+      "tagline": "Automated test asset",
+      "description": "Verifies data survives restart",
+      "category": "SaaS",
+      "askingPrice": 75000,
+      "minimumPrice": 50000,
+      "targetPrice": 65000,
+      "currency": "USD",
+      "status": "active",
+      "visibility": "Public",
+      "technologies": [
+        "TypeScript"
+      ],
+      "businessModel": "Subscription",
+      "financials": {
+        "monthlyRevenue": 6200,
+        "mrr": 6200,
+        "arr": 74400,
+        "annualRevenue": 74400,
+        "monthlyProfit": 4500,
+        "annualProfit": 54000,
+        "growthRateYoY": 50,
+        "churnRate": 1.5,
+        "activeUsers": 1000,
+        "monthlyTraffic": 25000
+      },
+      "scores": {
+        "technologyScore": 90,
+        "marketScore": 90,
+        "businessScore": 90,
+        "growthScore": 90,
+        "revenueScore": 90,
+        "strategicScore": 90,
+        "buyerAppeal": 90,
+        "overallScore": 90
+      }
+    },
+    {
+      "id": "proj-test-1788287741809",
+      "workspaceId": "ws-1",
+      "name": "Persistence Verification Asset",
+      "tagline": "Automated test asset",
+      "description": "Verifies data survives restart",
+      "category": "SaaS",
+      "askingPrice": 75000,
+      "minimumPrice": 50000,
+      "targetPrice": 65000,
+      "currency": "USD",
+      "status": "active",
+      "visibility": "Public",
+      "technologies": [
+        "TypeScript"
+      ],
+      "businessModel": "Subscription",
+      "financials": {
+        "monthlyRevenue": 6200,
+        "mrr": 6200,
+        "arr": 74400,
+        "annualRevenue": 74400,
+        "monthlyProfit": 4500,
+        "annualProfit": 54000,
+        "growthRateYoY": 50,
+        "churnRate": 1.5,
+        "activeUsers": 1000,
+        "monthlyTraffic": 25000
+      },
+      "scores": {
+        "technologyScore": 90,
+        "marketScore": 90,
+        "businessScore": 90,
+        "growthScore": 90,
+        "revenueScore": 90,
+        "strategicScore": 90,
+        "buyerAppeal": 90,
+        "overallScore": 90
+      }
+    },
+    {
+      "id": "proj-test-1788287716318",
+      "workspaceId": "ws-1",
+      "name": "Persistence Verification Asset",
+      "tagline": "Automated test asset",
+      "description": "Verifies data survives restart",
+      "category": "SaaS",
+      "askingPrice": 75000,
+      "minimumPrice": 50000,
+      "targetPrice": 65000,
+      "currency": "USD",
+      "status": "active",
+      "visibility": "Public",
+      "technologies": [
+        "TypeScript"
+      ],
+      "businessModel": "Subscription",
+      "financials": {
+        "monthlyRevenue": 6200,
+        "mrr": 6200,
+        "arr": 74400,
+        "annualRevenue": 74400,
+        "monthlyProfit": 4500,
+        "annualProfit": 54000,
+        "growthRateYoY": 50,
+        "churnRate": 1.5,
+        "activeUsers": 1000,
+        "monthlyTraffic": 25000
+      },
+      "scores": {
+        "technologyScore": 90,
+        "marketScore": 90,
+        "businessScore": 90,
+        "growthScore": 90,
+        "revenueScore": 90,
+        "strategicScore": 90,
+        "buyerAppeal": 90,
+        "overallScore": 90
+      }
+    },
+    {
+      "id": "proj-1",
+      "workspaceId": "ws-1",
+      "name": "DevPulse AI",
+      "tagline": "Autonomous Code Review & Observability SaaS Platform",
+      "description": "DevPulse AI is a developer tooling SaaS that integrates directly with GitHub and GitLab to provide AI-powered automated pull request reviews, security vulnerability scanning, and CI/CD bottleneck telemetry. Serving over 2,400 engineering teams with 88% gross margin.",
+      "category": "SaaS",
+      "url": "https://devpulse-ai.io",
+      "repositoryUrl": "https://github.com/apex-ventures/devpulse-core",
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "OpenTelemetry"
+      ],
+      "businessModel": "Tiered B2B SaaS ($29/dev/mo to $199/dev/mo) + Annual Enterprise contracts with SSO and compliance add-ons.",
+      "financials": {
+        "monthlyRevenue": 6200,
+        "annualRevenue": 74400,
+        "mrr": 6200,
+        "arr": 74400,
+        "monthlyProfit": 4800,
+        "annualProfit": 57600,
+        "monthlyExpenses": 1400,
+        "growthRateYoY": 68,
+        "churnRate": 1.8,
+        "activeUsers": 2400,
+        "monthlyTraffic": 48500
+      },
+      "askingPrice": 65000,
+      "minimumPrice": 48000,
+      "targetPrice": 56000,
+      "currency": "USD",
+      "country": "United States",
+      "targetMarket": "Global Software Engineering & DevOps Organizations",
+      "status": "negotiating",
+      "visibility": "Public",
+      "scores": {
+        "technologyScore": 94,
+        "marketScore": 91,
+        "businessScore": 89,
+        "growthScore": 93,
+        "revenueScore": 87,
+        "strategicScore": 96,
+        "buyerAppeal": 95,
+        "overallScore": 92
+      },
+      "intelligence": {
+        "overview": "DevPulse AI is an enterprise-grade developer productivity platform with proven recurring revenue and high buyer appeal across corporate DevOps acquirers.",
+        "businessModel": "Subscription recurring model with negative net revenue churn on annual tiers.",
+        "technologyStack": [
+          "TypeScript",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Redis",
+          "Docker",
+          "OpenTelemetry"
+        ],
+        "marketLandscape": "Developer productivity tools market is growing at 24% CAGR driven by AI-assisted software delivery.",
+        "targetCustomers": [
+          "Mid-market tech companies",
+          "Enterprise engineering organizations",
+          "Scale-up software agencies"
+        ],
+        "competitiveAdvantages": [
+          "Proprietary AST code-parsing engine with sub-500ms response time",
+          "Zero-setup GitHub Marketplace app with viral developer adoption",
+          "Clean intellectual property with 100% founder ownership and zero external equity"
+        ],
+        "weaknesses": [
+          "Sales pipeline currently 90% organic; outbound enterprise sales playbook ready for scaling"
+        ],
+        "risks": [
+          "Cloud API rate-limits and token costs managed through local AST caching"
+        ],
+        "growthOpportunities": [
+          "Add automated Jira / Linear ticket generation add-on ($15/seat)",
+          "Launch on-premise Docker container for defense and banking sectors",
+          "Cross-sell to buyer customer bases"
+        ],
+        "strategicValue": "Acquirer gains instant developer mindshare, 2,400 active engineering teams, and an enterprise code analysis engine.",
+        "acquisitionOpportunities": [
+          "Strategic bolt-on for APM & Observability giants (Datadog, Dynatrace, New Relic)",
+          "High-velocity expansion for Git/Dev platforms (GitHub, GitLab, JetBrains)",
+          "Private Equity developer tool portfolio roll-up"
+        ]
+      },
+      "valuation": {
+        "lowValue": 49000,
+        "expectedValue": 56000,
+        "highValue": 72000,
+        "recommendedAskingPrice": 65000,
+        "expectedClosingRangeLow": 52000,
+        "expectedClosingRangeHigh": 60000,
+        "confidenceScore": 92,
+        "revenueMultiple": 4.5,
+        "sdeMultiple": 5.8,
+        "strategicPremium": 12000,
+        "methodologyNotes": [
+          "Valuation calculated via 60% ARR multiple weighting (4.5x) and 40% SDE multiple weighting (5.8x).",
+          "Includes upward adjustment for 68% YoY growth and sub-2% monthly churn.",
+          "Comparable transactions on MicroAcquire and FE International over trailing 6 months averaged 4.2x - 5.1x ARR."
+        ],
+        "disclaimer": "This analytical valuation is generated for guidance and strategic positioning and does not constitute a guaranteed legal appraisal.",
+        "generatedAt": "2026-08-15T12:00:00.000Z"
+      },
+      "optimization": {
+        "missingDocumentation": [
+          "SOC2 Type I compliance readiness questionnaire",
+          "Updated 2026 infrastructure dependency tree"
+        ],
+        "weakMetrics": [
+          "Enterprise customer tier currently accounts for only 22% of revenue vs 78% self-serve"
+        ],
+        "technicalRisks": [
+          "Single database node on AWS RDS requiring multi-AZ replication setup"
+        ],
+        "pricingIssues": [
+          "Self-serve tier priced at $29/dev is underpriced relative to competitors ($49/dev)"
+        ],
+        "buyerObjections": [
+          "Buyer may inquire about founder transition commitment length"
+        ],
+        "actionableRecommendations": [
+          {
+            "priority": "HIGH",
+            "title": "Raise Starter Tier Price to $39/dev",
+            "impact": "Will instantly expand MRR by ~$1,200/mo without churn impact"
+          },
+          {
+            "priority": "HIGH",
+            "title": "Compile Clean IP Assignment Certificates",
+            "impact": "Eliminates diligence friction and speeds closing by 10 days"
+          },
+          {
+            "priority": "MEDIUM",
+            "title": "Enable Multi-AZ Database Failover",
+            "impact": "Enhances technical due diligence health score"
+          }
+        ]
+      },
+      "readinessReport": {
+        "overallScore": 89,
+        "threshold": 75,
+        "status": "READY_FOR_OUTREACH",
+        "summary": "DevPulse AI exhibits strong M&A fundamentals with audited recurring revenue, low churn, and clear IP assignment. Diligence readiness is within the top decile for micro-SaaS assets.",
+        "blockingFactors": [],
+        "recommendations": [
+          "Upload updated SOC2 readiness self-assessment to VDR Tier 3",
+          "Ensure AWS RDS automated multi-region backup snapshot is recorded"
+        ],
+        "categories": {
+          "financialReadiness": 94,
+          "technicalReadiness": 91,
+          "legalIpReadiness": 96,
+          "analyticsReadiness": 88,
+          "documentationReadiness": 85,
+          "buyerAppeal": 92,
+          "marketability": 90,
+          "riskScore": 18
+        },
+        "generatedAt": "2026-08-20T10:00:00.000Z"
+      },
+      "claims": [
+        {
+          "field": "mrr",
+          "label": "Monthly Recurring Revenue ($6,200)",
+          "value": 6200,
+          "status": "VERIFIED",
+          "evidenceRef": "Stripe Billing API Sync #str_live_mrr_6200",
+          "verifiedAt": "2026-08-20T10:00:00.000Z",
+          "verifier": "Automated Stripe Connect API Audit Pipeline",
+          "confidence": 100,
+          "provenance": {
+            "source": "Stripe Invoicing & Subscription API (Connect ID: acct_1MDevPulseLive)",
+            "evidenceType": "Automated Real-Time Telemetry",
+            "evidenceRef": "stripe:sub_active_count:2400:mrr_sum:6200.00",
+            "verificationMethod": "OAuth Webhook Ledger Reconciliation",
+            "verificationTimestamp": "2026-08-20T10:00:00.000Z",
+            "verifier": "Nexa Financial Verifier Agent v2.4",
+            "confidence": 100,
+            "expirationDate": "2026-09-20T10:00:00.000Z"
+          }
+        },
+        {
+          "field": "arr",
+          "label": "Annual Recurring Revenue ($74,400)",
+          "value": 74400,
+          "status": "VERIFIED",
+          "evidenceRef": "Stripe Billing API Sync #str_live_arr_74400",
+          "verifiedAt": "2026-08-20T10:00:00.000Z",
+          "verifier": "Automated Stripe Connect API Audit Pipeline",
+          "confidence": 100,
+          "provenance": {
+            "source": "Stripe Billing API",
+            "evidenceType": "Automated Real-Time Telemetry",
+            "evidenceRef": "stripe:annual_contract_run_rate:74400.00",
+            "verificationMethod": "TTM Normalized Run-Rate Computation",
+            "verificationTimestamp": "2026-08-20T10:00:00.000Z",
+            "verifier": "Nexa Financial Verifier Agent v2.4",
+            "confidence": 100,
+            "expirationDate": "2026-09-20T10:00:00.000Z"
+          }
+        },
+        {
+          "field": "churn",
+          "label": "Monthly User Churn (1.8%)",
+          "value": "1.8%",
+          "status": "VERIFIED",
+          "evidenceRef": "PostHog / Mixpanel Telemetry #ph_cohort_2026",
+          "verifiedAt": "2026-08-20T10:00:00.000Z",
+          "verifier": "PostHog Analytics API Ingestion",
+          "confidence": 96,
+          "provenance": {
+            "source": "PostHog Cloud Analytics (Project: DevPulse-Prod)",
+            "evidenceType": "Analytics Event Ingestion Cohort Table",
+            "evidenceRef": "posthog:cohort:retention_matrix_30d:1.8pct",
+            "verificationMethod": "Direct API Cohort Calculation",
+            "verificationTimestamp": "2026-08-20T10:00:00.000Z",
+            "verifier": "Nexa Metric Auditor",
+            "confidence": 96,
+            "expirationDate": "2026-09-20T10:00:00.000Z"
+          }
+        },
+        {
+          "field": "users",
+          "label": "Active Developer Seats (2,400)",
+          "value": 2400,
+          "status": "VERIFIED",
+          "evidenceRef": "PostgreSQL User Query Count #pg_seat_query_active",
+          "verifiedAt": "2026-08-20T10:00:00.000Z",
+          "verifier": "Database Read Replica Health Query",
+          "confidence": 98,
+          "provenance": {
+            "source": "PostgreSQL AWS RDS Instance (devpulse-prod-ro)",
+            "evidenceType": "Database Read Replica Telemetry",
+            "evidenceRef": "SELECT COUNT(*) FROM users WHERE status = 'ACTIVE' AND last_active_at > NOW() - INTERVAL '14 days'",
+            "verificationMethod": "Automated Read-Only Replica Query",
+            "verificationTimestamp": "2026-08-20T10:00:00.000Z",
+            "verifier": "Nexa Technical Verifier Agent",
+            "confidence": 98
+          }
+        },
+        {
+          "field": "expenses",
+          "label": "Monthly Operating Costs ($1,400)",
+          "value": 1400,
+          "status": "SELLER_PROVIDED",
+          "evidenceRef": "Seller Invoices: AWS ($850) + OpenAI ($420) + Cloudflare ($130)",
+          "notes": "Seller provided PDF invoices; not yet reconciled via automated bank feed",
+          "confidence": 80
+        },
+        {
+          "field": "ip",
+          "label": "100% Sole Founder IP Ownership",
+          "value": "100% Clear",
+          "status": "VERIFIED",
+          "evidenceRef": "Delaware C-Corp Cap Table Document #corp_del_2024_091",
+          "verifiedAt": "2026-08-20T10:00:00.000Z",
+          "verifier": "Legal Counsel IP Review & Cap Table Audit",
+          "confidence": 100,
+          "provenance": {
+            "source": "Delaware Division of Corporations & Cap Table Certificate",
+            "evidenceType": "Authoritative Legal Filing & Cap Table",
+            "evidenceRef": "delaware:filing:DE-2024-881920-IP-ASSIGN",
+            "verificationMethod": "Certified Notarized IP Assignment Document Match",
+            "verificationTimestamp": "2026-08-20T10:00:00.000Z",
+            "verifier": "Nexa Legal Governance Subsystem",
+            "confidence": 100
+          }
+        }
+      ],
+      "ownershipChecklist": [
+        {
+          "id": "ao-1",
+          "assetType": "Domain",
+          "name": "Primary Domain",
+          "identifier": "devpulse-ai.io",
+          "verificationMethod": "DNS TXT Record",
+          "status": "VERIFIED",
+          "verifiedAt": "2026-08-20T10:00:00.000Z",
+          "evidenceUrl": "dns://_nexa-verify-devpulse"
+        },
+        {
+          "id": "ao-2",
+          "assetType": "GitHub Repository",
+          "name": "Core Source Code",
+          "identifier": "github.com/apex-ventures/devpulse-core",
+          "verificationMethod": "OAuth Commit Signature",
+          "status": "VERIFIED",
+          "verifiedAt": "2026-08-20T10:00:00.000Z"
+        },
+        {
+          "id": "ao-3",
+          "assetType": "Cloud Infrastructure",
+          "name": "AWS Production Stack",
+          "identifier": "aws:account:991823901",
+          "verificationMethod": "Cloud IAM Role",
+          "status": "VERIFIED",
+          "verifiedAt": "2026-08-20T10:00:00.000Z"
+        },
+        {
+          "id": "ao-4",
+          "assetType": "Stripe/Billing",
+          "name": "Stripe Connect Account",
+          "identifier": "acct_1MDevPulseLive",
+          "verificationMethod": "Ping Endpoint",
+          "status": "VERIFIED",
+          "verifiedAt": "2026-08-20T10:00:00.000Z"
+        }
+      ],
+      "assets": [
+        {
+          "id": "ast-1",
+          "projectId": "proj-1",
+          "title": "DevPulse Architecture Diagram 2026",
+          "type": "architecture",
+          "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80",
+          "size": "2.4 MB",
+          "mimeType": "image/png",
+          "uploadedAt": "2026-08-10T14:20:00.000Z"
+        },
+        {
+          "id": "ast-2",
+          "projectId": "proj-1",
+          "title": "Audited Stripe Financials (Trailing 12 Months)",
+          "type": "financial_sheet",
+          "url": "/docs/devpulse-financials-ttm.pdf",
+          "size": "1.8 MB",
+          "mimeType": "application/pdf",
+          "uploadedAt": "2026-08-12T09:15:00.000Z"
+        }
+      ],
+      "createdAt": "2026-08-01T10:00:00.000Z",
+      "updatedAt": "2026-08-30T16:45:00.000Z"
+    },
+    {
+      "id": "proj-2",
+      "workspaceId": "ws-1",
+      "name": "FinMatrix API",
+      "tagline": "High-Throughput Invoicing & Tax Ledger Developer SDK",
+      "description": "Unified cross-border invoicing and automatic VAT/GST tax calculation engine with direct webhook pipelines and ERP synchronization for high-growth digital businesses.",
+      "category": "API / Developer Tool",
+      "url": "https://finmatrix.dev",
+      "repositoryUrl": "https://github.com/apex-ventures/finmatrix-api",
+      "technologies": [
+        "Go",
+        "PostgreSQL",
+        "gRPC",
+        "AWS Lambda",
+        "Terraform"
+      ],
+      "businessModel": "Usage-based API calls + Monthly Base Tier ($99 to $899/mo).",
+      "financials": {
+        "monthlyRevenue": 9400,
+        "annualRevenue": 112800,
+        "mrr": 9400,
+        "arr": 112800,
+        "monthlyProfit": 7600,
+        "annualProfit": 91200,
+        "monthlyExpenses": 1800,
+        "growthRateYoY": 52,
+        "churnRate": 0.9,
+        "activeUsers": 480,
+        "monthlyTraffic": 24000
+      },
+      "askingPrice": 120000,
+      "minimumPrice": 90000,
+      "targetPrice": 105000,
+      "currency": "USD",
+      "country": "United Kingdom",
+      "targetMarket": "Global E-commerce, SaaS, and Digital Marketplaces",
+      "status": "active",
+      "visibility": "Public",
+      "scores": {
+        "technologyScore": 96,
+        "marketScore": 90,
+        "businessScore": 93,
+        "growthScore": 89,
+        "revenueScore": 94,
+        "strategicScore": 95,
+        "buyerAppeal": 92,
+        "overallScore": 93
+      },
+      "assets": [],
+      "createdAt": "2026-08-05T11:30:00.000Z",
+      "updatedAt": "2026-08-28T14:10:00.000Z"
+    },
+    {
+      "id": "proj-3",
+      "workspaceId": "ws-1",
+      "name": "ShopZen Marketplace",
+      "tagline": "Headless Multi-vendor Creator Storefront Engine",
+      "description": "Next.js 15 powered marketplace infrastructure allowing digital creators to spin up customized multi-vendor storefronts in under 2 minutes with integrated Stripe Connect payout splits.",
+      "category": "Marketplace",
+      "url": "https://shopzen.app",
+      "repositoryUrl": "https://github.com/apex-ventures/shopzen-marketplace",
+      "technologies": [
+        "React",
+        "Next.js",
+        "TailwindCSS",
+        "Node.js",
+        "PostgreSQL",
+        "Stripe Connect"
+      ],
+      "businessModel": "2.5% marketplace GMV transaction fee + $29/mo Creator Pro plan.",
+      "financials": {
+        "monthlyRevenue": 3800,
+        "annualRevenue": 45600,
+        "mrr": 3800,
+        "arr": 45600,
+        "monthlyProfit": 2900,
+        "annualProfit": 34800,
+        "monthlyExpenses": 900,
+        "growthRateYoY": 41,
+        "churnRate": 2.5,
+        "activeUsers": 820,
+        "monthlyTraffic": 39000
+      },
+      "askingPrice": 42000,
+      "minimumPrice": 32000,
+      "targetPrice": 38000,
+      "currency": "USD",
+      "country": "Canada",
+      "targetMarket": "Creator Economy & Digital Product Sellers",
+      "status": "active",
+      "visibility": "Public",
+      "scores": {
+        "technologyScore": 88,
+        "marketScore": 86,
+        "businessScore": 84,
+        "growthScore": 87,
+        "revenueScore": 82,
+        "strategicScore": 85,
+        "buyerAppeal": 88,
+        "overallScore": 86
+      },
+      "assets": [],
+      "createdAt": "2026-08-10T15:00:00.000Z",
+      "updatedAt": "2026-08-25T11:20:00.000Z"
+    }
+  ],
+  "buyers": [
+    {
+      "id": "buyer-1",
+      "workspaceId": "ws-1",
+      "companyName": "Datadog Ventures / M&A",
+      "website": "https://datadoghq.com",
+      "industry": "Observability, APM & Developer Platforms",
+      "country": "United States",
+      "size": "5,000+ employees",
+      "products": [
+        "Datadog APM",
+        "CI Visibility",
+        "Continuous Profiler",
+        "Cloud Security"
+      ],
+      "technologies": [
+        "Go",
+        "TypeScript",
+        "Kubernetes",
+        "Python",
+        "OpenTelemetry"
+      ],
+      "businessModel": "Enterprise B2B SaaS & Usage Ingestion",
+      "potentialBudgetMin": 50000,
+      "potentialBudgetMax": 350000,
+      "acquisitionHistory": [
+        "Acquired Timber.io (Vector logging) for ~$35M",
+        "Acquired CoScreen (Developer collaboration tool)",
+        "Acquired Seekret (API discovery)"
+      ],
+      "decisionMakers": [
+        {
+          "name": "Alexandre Renard",
+          "legalName": "Alexandre Jean-Luc Renard",
+          "role": "VP Corporate Development & M&A",
+          "email": "alex.renard@datadoghq.com",
+          "linkedin": "https://linkedin.com/in/alexandrerenard-datadog",
+          "corporateEmailVerified": true,
+          "corporateDmarcVerified": true,
+          "identityVerificationMethod": "Corporate SSO (Okta) + LinkedIn Verified Work ID",
+          "identityVerifiedAt": "2026-08-10T10:00:00.000Z",
+          "isAuthorizedMnaSigner": true
+        },
+        {
+          "name": "Marcus Vance",
+          "legalName": "Marcus Vance",
+          "role": "Head of Developer Ecosystem",
+          "email": "m.vance@datadoghq.com",
+          "linkedin": "https://linkedin.com/in/marcusvance-ddog",
+          "corporateEmailVerified": true,
+          "corporateDmarcVerified": true,
+          "identityVerificationMethod": "Corporate SSO (Okta)",
+          "identityVerifiedAt": "2026-08-10T10:00:00.000Z",
+          "isAuthorizedMnaSigner": false
+        }
+      ],
+      "contactEmail": "corpdev@datadoghq.com",
+      "qualificationTier": "QUALIFIED",
+      "corporateAffiliationStatus": "VERIFIED",
+      "isCorporateAuthorizedRep": true,
+      "affiliationVerificationMethod": "Authoritative Corporate DMARC/DKIM + SEC 10-K CorpDev Authorized Roster Reconciliation",
+      "affiliationVerifiedAt": "2026-08-10T10:00:00.000Z",
+      "affiliationEvidenceDoc": "datadog:mna_authorization:delaware_entity_882910_verified",
+      "strategicFitLabel": "AI-Generated Strategic Fit Score",
+      "strategicFitReasoning": [
+        "Strategic bolt-on for Datadog CI Visibility & APM suite",
+        "Direct developer workflow capture across 2,400 active engineering teams",
+        "Demonstrated acquisition track record in developer tools (Timber.io, CoScreen)"
+      ],
+      "fundingStatus": "Public Corporation ($38B Cap / $2.4B Cash)",
+      "strategicRationale": "Bolt-on CI/CD telemetry and developer code review directly into Datadog APM ecosystem.",
+      "qualityScore": {
+        "strategicFit": 98,
+        "financialCapacity": 100,
+        "acquisitionHistory": 96,
+        "intent": 95,
+        "verification": 98,
+        "technicalFit": 94,
+        "speed": 92,
+        "risk": 8,
+        "overallQualityScore": 97,
+        "confidence": 96,
+        "evidenceSummary": [
+          "Verified Corporate Domain @datadoghq.com with DMARC/DKIM match",
+          "Track record of 3+ successful developer tool acquisitions",
+          "Executive VP M&A Alexandre Renard confirmed direct deal authority"
+        ]
+      },
+      "status": "NEGOTIATING",
+      "intentScore": 94,
+      "overallScore": 96,
+      "notes": "Verified enterprise strategic acquirer. Submitted formal $52,000 offer for DevPulse AI. Evaluating final handover terms.",
+      "tags": [
+        "Tier-1 Strategic",
+        "Fast Closer",
+        "High Budget"
+      ],
+      "createdAt": "2026-08-10T10:00:00.000Z"
+    },
+    {
+      "id": "buyer-2",
+      "workspaceId": "ws-1",
+      "companyName": "Stripe Capital & M&A",
+      "website": "https://stripe.com",
+      "industry": "FinTech & Developer Infrastructure",
+      "country": "United States",
+      "size": "7,000+ employees",
+      "products": [
+        "Stripe Billing",
+        "Stripe Tax",
+        "Stripe Connect",
+        "Stripe Terminal"
+      ],
+      "technologies": [
+        "Ruby",
+        "Go",
+        "TypeScript",
+        "Java",
+        "PostgreSQL"
+      ],
+      "businessModel": "Transaction Processing & Financial SaaS",
+      "potentialBudgetMin": 100000,
+      "potentialBudgetMax": 750000,
+      "acquisitionHistory": [
+        "Acquired Paystack for $200M",
+        "Acquired TaxJar for $150M",
+        "Acquired Index (In-store payment SDK)"
+      ],
+      "decisionMakers": [
+        {
+          "name": "Elena Rostova",
+          "legalName": "Elena Rostova",
+          "role": "Director of Strategic Acquisitions",
+          "email": "elena.rostova@stripe.com",
+          "corporateEmailVerified": true,
+          "corporateDmarcVerified": true,
+          "identityVerificationMethod": "Corporate Email DKIM Match",
+          "identityVerifiedAt": "2026-08-12T11:30:00.000Z",
+          "isAuthorizedMnaSigner": true
+        },
+        {
+          "name": "James Thornton",
+          "legalName": "James Thornton",
+          "role": "Head of Billing Product Expansion",
+          "email": "jthornton@stripe.com",
+          "corporateEmailVerified": true,
+          "corporateDmarcVerified": true,
+          "identityVerificationMethod": "Corporate Email DKIM Match",
+          "identityVerifiedAt": "2026-08-12T11:30:00.000Z",
+          "isAuthorizedMnaSigner": false
+        }
+      ],
+      "contactEmail": "mna-inquiries@stripe.com",
+      "qualificationTier": "VERIFIED",
+      "corporateAffiliationStatus": "VERIFIED",
+      "isCorporateAuthorizedRep": true,
+      "affiliationVerificationMethod": "Direct corporate email DKIM cryptographic signature verification",
+      "affiliationVerifiedAt": "2026-08-12T11:30:00.000Z",
+      "affiliationEvidenceDoc": "stripe:corpdev:verified_auth_inbound",
+      "strategicFitLabel": "AI-Generated Strategic Fit Score",
+      "strategicFitReasoning": [
+        "FinMatrix micro-ledger pipelines complement Stripe Billing",
+        "High synergies for cross-border merchant compliance"
+      ],
+      "qualityScore": {
+        "strategicFit": 96,
+        "financialCapacity": 100,
+        "acquisitionHistory": 98,
+        "intent": 90,
+        "verification": 95,
+        "technicalFit": 96,
+        "speed": 88,
+        "risk": 6,
+        "overallQualityScore": 95,
+        "confidence": 94,
+        "evidenceSummary": [
+          "Direct contact with Director of Strategic Acquisitions Elena Rostova",
+          "Multi-billion balance sheet with instant cash closing capability"
+        ]
+      },
+      "status": "INTERESTED",
+      "intentScore": 88,
+      "overallScore": 94,
+      "notes": "Reviewing FinMatrix API code architecture and tax rate database schema.",
+      "tags": [
+        "Fintech Giant",
+        "Enterprise Cash",
+        "Strategic Fit"
+      ],
+      "createdAt": "2026-08-12T11:30:00.000Z"
+    },
+    {
+      "id": "buyer-3",
+      "workspaceId": "ws-1",
+      "companyName": "SaaSGrowth Partners PE",
+      "website": "https://saasgrowthpe.com",
+      "industry": "Software Private Equity & Micro-Rollups",
+      "country": "United Kingdom",
+      "size": "25-50 investment professionals",
+      "products": [
+        "B2B SaaS Portfolio Fund III ($120M AUM)"
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "Python",
+        "AWS"
+      ],
+      "businessModel": "EBITDA Optimization & B2B Expansion",
+      "potentialBudgetMin": 40000,
+      "potentialBudgetMax": 200000,
+      "acquisitionHistory": [
+        "Acquired 14 micro-SaaS assets between $30k - $250k over 24 months",
+        "Standard 30-day closing cycle with Escrow.com"
+      ],
+      "decisionMakers": [
+        {
+          "name": "Julian Croft",
+          "role": "Managing Partner",
+          "email": "jcroft@saasgrowthpe.com",
+          "corporateEmailVerified": true,
+          "isAuthorizedMnaSigner": true
+        },
+        {
+          "name": "Claire Holloway",
+          "role": "Investment Associate",
+          "email": "claire@saasgrowthpe.com",
+          "corporateEmailVerified": false,
+          "isAuthorizedMnaSigner": false
+        }
+      ],
+      "contactEmail": "deals@saasgrowthpe.com",
+      "qualificationTier": "QUALIFIED",
+      "corporateAffiliationStatus": "VERIFIED",
+      "isCorporateAuthorizedRep": true,
+      "affiliationVerificationMethod": "UK Companies House Registry #0981290 + Domain MX Verification",
+      "strategicFitLabel": "AI-Generated Strategic Fit Score",
+      "strategicFitReasoning": [
+        "High cash-flow focus matches buyer fund mandate"
+      ],
+      "status": "QUALIFIED",
+      "intentScore": 82,
+      "overallScore": 89,
+      "notes": "Active PE roll-up. Looking for high cashflow software assets.",
+      "tags": [
+        "Private Equity",
+        "Repeat Acquirer",
+        "Quick Escrow"
+      ],
+      "createdAt": "2026-08-14T14:00:00.000Z"
+    },
+    {
+      "id": "buyer-4",
+      "workspaceId": "ws-1",
+      "companyName": "Vercel Ecosystem Fund",
+      "website": "https://vercel.com",
+      "industry": "Frontend Cloud & AI Frameworks",
+      "country": "United States",
+      "size": "600+ employees",
+      "products": [
+        "Vercel Platform",
+        "Next.js",
+        "v0",
+        "Vercel AI SDK"
+      ],
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Rust",
+        "Edge Functions"
+      ],
+      "businessModel": "Hosting & Usage Platform",
+      "potentialBudgetMin": 35000,
+      "potentialBudgetMax": 180000,
+      "acquisitionHistory": [
+        "Acquired Turborepo",
+        "Acquired Splitbee (Web Analytics)"
+      ],
+      "decisionMakers": [
+        {
+          "name": "Liam O’Connor",
+          "role": "Ecosystem & Acquisitions Lead",
+          "email": "liam@vercel.com",
+          "corporateEmailVerified": false,
+          "isAuthorizedMnaSigner": false
+        }
+      ],
+      "contactEmail": "ecosystem@vercel.com",
+      "qualificationTier": "PARTIALLY_VERIFIED",
+      "corporateAffiliationStatus": "AFFILIATION_UNVERIFIED",
+      "isCorporateAuthorizedRep": false,
+      "strategicFitLabel": "AI-Generated Strategic Fit Score",
+      "strategicFitReasoning": [
+        "Next.js ecosystem alignment based on public GitHub repository dependencies"
+      ],
+      "status": "CONTACTED",
+      "intentScore": 76,
+      "overallScore": 91,
+      "notes": "Targeted for DevPulse AI and ShopZen integration synergies.",
+      "tags": [
+        "Cloud Ecosystem",
+        "Strategic Tech Fit"
+      ],
+      "createdAt": "2026-08-16T09:45:00.000Z"
+    }
+  ],
+  "matches": [
+    {
+      "id": "match-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "industryMatch": 98,
+      "techMatch": 95,
+      "marketMatch": 94,
+      "businessModelMatch": 92,
+      "strategicFit": 99,
+      "estimatedBudgetScore": 95,
+      "acquisitionHistoryScore": 92,
+      "buyerIntentScore": 96,
+      "overallMatchScore": 96,
+      "strategicRationale": "Datadog can integrate DevPulse AI into CI Visibility to offer direct code review telemetry, instantly neutralizing competitive offerings from GitHub Copilot and Dynatrace.",
+      "whyTheyWouldBuy": "Eliminates 14+ months of internal R&D, captures 2,400 active developer seats, and expands Datadog footprint into pre-deployment PR pipelines.",
+      "synergies": [
+        "Cross-sell to Datadog’s 28,000+ enterprise customers",
+        "Direct telemetry integration into Datadog unified agent",
+        "Immediate ~6x expansion in DevPulse ARPU by bundling with enterprise contracts"
+      ],
+      "integrationRoadmap": "Month 1: GitHub App rebranding and OAuth SSO integration. Month 2: OpenTelemetry trace pipeline unified with Datadog backend. Month 3: Global release via Datadog Marketplace.",
+      "potentialObjections": [
+        "Will require verifying that code review models do not retain confidential buyer code in training weights"
+      ]
+    },
+    {
+      "id": "match-2",
+      "projectId": "proj-2",
+      "buyerId": "buyer-2",
+      "industryMatch": 96,
+      "techMatch": 92,
+      "marketMatch": 95,
+      "businessModelMatch": 94,
+      "strategicFit": 97,
+      "estimatedBudgetScore": 98,
+      "acquisitionHistoryScore": 96,
+      "buyerIntentScore": 89,
+      "overallMatchScore": 95,
+      "strategicRationale": "Stripe Billing can natively incorporate FinMatrix high-throughput ledger pipelines and automated VAT/GST tax calculation algorithms.",
+      "whyTheyWouldBuy": "Increases processing volume and sticky retention for Stripe cross-border merchant accounts.",
+      "synergies": [
+        "Full Stripe Connect integration",
+        "Zero migration friction for mutual API developers",
+        "Reduces Stripe merchant compliance ticket volume"
+      ],
+      "integrationRoadmap": "Month 1: gRPC API gateway integration. Month 2: Stripe Dashboard billing tab integration. Month 3: Full deprecation of standalone hosting into Stripe AWS infra.",
+      "potentialObjections": [
+        "Legal compliance audit on multi-jurisdiction tax engine rules"
+      ]
+    },
+    {
+      "id": "match-3",
+      "projectId": "proj-1",
+      "buyerId": "buyer-3",
+      "industryMatch": 88,
+      "techMatch": 90,
+      "marketMatch": 86,
+      "businessModelMatch": 95,
+      "strategicFit": 87,
+      "estimatedBudgetScore": 90,
+      "acquisitionHistoryScore": 94,
+      "buyerIntentScore": 84,
+      "overallMatchScore": 89,
+      "strategicRationale": "SaaSGrowth Partners can plug DevPulse AI into their shared marketing and outbound sales engine to 3x ARR within 12 months.",
+      "whyTheyWouldBuy": "High cashflow yield (78% net margin) and predictable B2B recurring revenue.",
+      "synergies": [
+        "Shared customer success and marketing agency resources",
+        "Centralized AWS hosting contract discounts"
+      ],
+      "integrationRoadmap": "Day 1-14: Financial & domain escrow transfer. Day 15-30: Founder support period & growth playbook handoff.",
+      "potentialObjections": [
+        "May negotiate for higher upfront discount or milestone earnout"
+      ]
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "camp-1",
+      "workspaceId": "ws-1",
+      "projectId": "proj-1",
+      "name": "DevPulse AI - Tier-1 Strategic Acquirers Q3",
+      "targetIndustry": "DevOps, APM, Cloud Infrastructure, Developer Tools",
+      "targetCountries": [
+        "United States",
+        "United Kingdom",
+        "Germany",
+        "Canada"
+      ],
+      "minBuyerScore": 85,
+      "maxBuyers": 25,
+      "status": "active",
+      "automationLevel": "assisted",
+      "followUpPolicy": {
+        "followUp1Days": 3,
+        "followUp2Days": 7,
+        "finalFollowUpDays": 14,
+        "stopOnReply": true,
+        "stopOnUnsubscribe": true
+      },
+      "totalTargeted": 24,
+      "totalSent": 18,
+      "totalOpened": 15,
+      "totalReplies": 7,
+      "totalInterested": 4,
+      "createdAt": "2026-08-15T09:00:00.000Z"
+    },
+    {
+      "id": "camp-2",
+      "workspaceId": "ws-1",
+      "projectId": "proj-2",
+      "name": "FinMatrix - Global FinTech & Merchant Enablers",
+      "targetIndustry": "FinTech, Payments, Developer SDKs, E-Commerce",
+      "targetCountries": [
+        "United States",
+        "United Kingdom",
+        "Singapore"
+      ],
+      "minBuyerScore": 80,
+      "maxBuyers": 30,
+      "status": "active",
+      "automationLevel": "autonomous",
+      "followUpPolicy": {
+        "followUp1Days": 4,
+        "followUp2Days": 8,
+        "finalFollowUpDays": 14,
+        "stopOnReply": true,
+        "stopOnUnsubscribe": true
+      },
+      "totalTargeted": 30,
+      "totalSent": 22,
+      "totalOpened": 19,
+      "totalReplies": 9,
+      "totalInterested": 5,
+      "createdAt": "2026-08-18T11:00:00.000Z"
+    }
+  ],
+  "emails": [
+    {
+      "id": "em-1",
+      "workspaceId": "ws-1",
+      "threadId": "th-1",
+      "buyerId": "buyer-1",
+      "projectId": "proj-1",
+      "sender": "corpdev@datadoghq.com",
+      "recipient": "deals@apexventures.io",
+      "subject": "Re: Confidential Briefing: DevPulse AI Acquisition Synergies with Datadog",
+      "body": "Hi Farhan,\n\nOur Corporate Development team and VP of Engineering reviewed the DevPulse AI teaser. We are impressed with your AST parsing velocity and 68% YoY growth.\n\nWe would like to submit an initial acquisition offer of $52,000 all-cash, subject to standard 21-day technical due diligence and mutual NDA execution. Can you provide access to the Virtual Data Room and Cap Table documents?\n\nBest regards,\nAlexandre Renard\nVP Corporate Development, Datadog",
+      "direction": "inbound",
+      "status": "received",
+      "intent": "Offer",
+      "intentScore": 96,
+      "classificationReason": "Buyer submitted an explicit $52,000 cash offer and requested Data Room access under NDA.",
+      "extractedQuestions": [
+        "Can you provide access to the Virtual Data Room and Cap Table documents?"
+      ],
+      "extractedOffers": [
+        "$52,000 all-cash"
+      ],
+      "aiDraftReply": "Hi Alexandre,\n\nThank you for Datadog's formal offer of $52,000. While our target asking valuation is $56,000 given our recent acceleration in monthly MRR, we are receptive to proceeding. I have generated our mutual NDA for digital signature, after which full Virtual Data Room access will be automatically unlocked.\n\nLooking forward to a smooth closing.",
+      "isApproved": true,
+      "timestamp": "2026-08-29T16:30:00.000Z"
+    },
+    {
+      "id": "em-2",
+      "workspaceId": "ws-1",
+      "threadId": "th-2",
+      "buyerId": "buyer-2",
+      "projectId": "proj-2",
+      "sender": "elena.rostova@stripe.com",
+      "recipient": "deals@apexventures.io",
+      "subject": "Stripe M&A Review: FinMatrix API Technical Due Diligence Inquiries",
+      "body": "Hello Team,\n\nWe have completed our preliminary architectural review of the FinMatrix Go SDK. We have three technical questions:\n1. What is the average p99 latency for the cross-border tax calculation endpoint under 10k RPS load?\n2. Are all country VAT rates pulled via live government API bridges or cached locally in PostgreSQL?\n3. Would the founder be open to a 60-day advisory transition period?\n\nIf these check out, we intend to present a formal Letter of Intent (LOI) in the $100k - $110k range.",
+      "direction": "inbound",
+      "status": "received",
+      "intent": "Question",
+      "intentScore": 91,
+      "classificationReason": "Buyer asked deep technical diligence questions and indicated impending LOI in $100k-$110k range.",
+      "extractedQuestions": [
+        "What is the average p99 latency under 10k RPS load?",
+        "Are country VAT rates pulled live or cached in PostgreSQL?",
+        "Is founder open to a 60-day advisory transition?"
+      ],
+      "extractedOffers": [
+        "Indicated impending LOI in the $100k - $110k range"
+      ],
+      "aiDraftReply": "Hi Elena,\n\n1. Average p99 latency is verified at 18ms under 10k RPS via our Go gRPC cluster.\n2. VAT tables are compiled into an in-memory Redis cache with nightly automated schema reconciliation.\n3. Yes, our team is fully committed to a 60-day transition support structure.\n\nHappy to share the live benchmark report.",
+      "isApproved": false,
+      "timestamp": "2026-08-30T14:15:00.000Z"
+    }
+  ],
+  "deals": [
+    {
+      "id": "deal-1",
+      "workspaceId": "ws-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "stage": "COMPLETED",
+      "currentOfferAmount": 58000,
+      "targetPrice": 56000,
+      "minimumPrice": 48000,
+      "askingPrice": 65000,
+      "closingProbability": 88,
+      "riskLevel": "LOW",
+      "bestDealScore": 94,
+      "negotiationLeverage": "SELLER_ADVANTAGE",
+      "recommendedNextAction": "Request user approval to counter at $54,500 with 30-day transition support or accept $52,000 cash with standard escrow.",
+      "ndaSigned": true,
+      "dataRoomAccessGranted": true,
+      "assignedAgent": "Negotiation Agent",
+      "healthScore": {
+        "status": "HEALTHY",
+        "overallScore": 92,
+        "buyerIntentFactor": 95,
+        "offerStrengthFactor": 92,
+        "priceDistanceFactor": 90,
+        "dueDiligenceProgressFactor": 88,
+        "ndaDataRoomFactor": 100,
+        "buyerResponsivenessFactor": 94,
+        "riskFactor": 10,
+        "closingProgressFactor": 85,
+        "summary": "Deal is progressing in prime territory. Buyer intent is institutional-grade with rapid response time and all-cash offer well above minimum policy floor ($48,000).",
+        "primaryRisks": [
+          "Founder handover consultation availability requirements during month 1"
+        ],
+        "suggestedAction": "Issue counter-proposal at $54,500 or accept $52,000 cash with standard Escrow.com settlement milestones."
+      },
+      "probabilityBreakdown": {
+        "probability": 88,
+        "confidence": 94,
+        "primaryFactors": [
+          "Direct M&A VP Alexandre Renard leading diligence",
+          "Executed mutual NDA and full Tier-3 VDR review completed",
+          "All-cash offer ($52,000) exceeds seller minimum floor ($48,000)",
+          "Clear strategic synergy with Datadog CI/CD roadmap"
+        ],
+        "negativeFactors": [
+          "Minor negotiation required on 30-day technical support warranty"
+        ],
+        "historicalBenchmark": "Comparable developer tool acquisitions closed at 91% conversion once VDR Tier-3 diligence passed."
+      },
+      "lastActivityAt": "2026-08-30T18:00:00.000Z",
+      "createdAt": "2026-08-18T10:00:00.000Z",
+      "updatedAt": "2026-09-01T18:51:19.346Z",
+      "archiveHash": "a9b02a3dff4a56268d73d34f6bb4e43d5035e8f21756b3a17d9a9a196ff79d15"
+    },
+    {
+      "id": "deal-2",
+      "workspaceId": "ws-1",
+      "projectId": "proj-2",
+      "buyerId": "buyer-2",
+      "stage": "QUALIFIED",
+      "currentOfferAmount": 105000,
+      "targetPrice": 105000,
+      "minimumPrice": 90000,
+      "askingPrice": 120000,
+      "closingProbability": 74,
+      "riskLevel": "LOW",
+      "bestDealScore": 91,
+      "negotiationLeverage": "BALANCED",
+      "recommendedNextAction": "Answer technical latency benchmarks and issue Mutual NDA for Virtual Data Room unlock.",
+      "ndaSigned": false,
+      "dataRoomAccessGranted": false,
+      "assignedAgent": "Due Diligence Agent",
+      "lastActivityAt": "2026-08-30T14:15:00.000Z",
+      "createdAt": "2026-08-20T11:00:00.000Z",
+      "updatedAt": "2026-08-30T14:15:00.000Z"
+    },
+    {
+      "id": "deal-3",
+      "workspaceId": "ws-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-3",
+      "stage": "INTERESTED",
+      "currentOfferAmount": 47000,
+      "targetPrice": 56000,
+      "minimumPrice": 48000,
+      "askingPrice": 65000,
+      "closingProbability": 65,
+      "riskLevel": "MEDIUM",
+      "bestDealScore": 82,
+      "negotiationLeverage": "SELLER_ADVANTAGE",
+      "recommendedNextAction": "Advise PE buyer that offer ($47,000) is below hard minimum floor ($48,000); propose counter at $52,000.",
+      "ndaSigned": true,
+      "dataRoomAccessGranted": true,
+      "assignedAgent": "Deal Manager Agent",
+      "lastActivityAt": "2026-08-28T09:30:00.000Z",
+      "createdAt": "2026-08-22T15:00:00.000Z",
+      "updatedAt": "2026-08-28T09:30:00.000Z"
+    }
+  ],
+  "offers": [
+    {
+      "id": "off-tx2-1788288679345",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 58000,
+      "currency": "USD",
+      "upfrontCash": 58000,
+      "earnoutAmount": 0,
+      "earnoutTerms": "None",
+      "paymentSchedule": "100% Upfront",
+      "transitionSupportDays": 30,
+      "nonCompeteMonths": 12,
+      "assetsIncluded": [
+        "Code",
+        "Domain"
+      ],
+      "exclusivityDays": 21,
+      "expirationDate": "2026-09-08T18:51:19.345Z",
+      "status": "active",
+      "history": [],
+      "createdAt": "2026-09-01T18:51:19.345Z",
+      "updatedAt": "2026-09-01T18:51:19.345Z"
+    },
+    {
+      "id": "off-tx1-1788288679325",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 55000,
+      "currency": "USD",
+      "upfrontCash": 55000,
+      "earnoutAmount": 0,
+      "earnoutTerms": "None",
+      "paymentSchedule": "100% Upfront",
+      "transitionSupportDays": 30,
+      "nonCompeteMonths": 12,
+      "assetsIncluded": [
+        "Code",
+        "Domain"
+      ],
+      "exclusivityDays": 21,
+      "expirationDate": "2026-09-08T18:51:19.325Z",
+      "status": "active",
+      "history": [],
+      "createdAt": "2026-09-01T18:51:19.325Z",
+      "updatedAt": "2026-09-01T18:51:19.325Z"
+    },
+    {
+      "id": "off-tx2-1788287948590",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 58000,
+      "currency": "USD",
+      "upfrontCash": 58000,
+      "earnoutAmount": 0,
+      "earnoutTerms": "None",
+      "paymentSchedule": "100% Upfront",
+      "transitionSupportDays": 30,
+      "nonCompeteMonths": 12,
+      "assetsIncluded": [
+        "Code",
+        "Domain"
+      ],
+      "exclusivityDays": 21,
+      "expirationDate": "2026-09-08T18:39:08.590Z",
+      "status": "active",
+      "history": [],
+      "createdAt": "2026-09-01T18:39:08.590Z",
+      "updatedAt": "2026-09-01T18:39:08.590Z"
+    },
+    {
+      "id": "off-tx1-1788287948588",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 55000,
+      "currency": "USD",
+      "upfrontCash": 55000,
+      "earnoutAmount": 0,
+      "earnoutTerms": "None",
+      "paymentSchedule": "100% Upfront",
+      "transitionSupportDays": 30,
+      "nonCompeteMonths": 12,
+      "assetsIncluded": [
+        "Code",
+        "Domain"
+      ],
+      "exclusivityDays": 21,
+      "expirationDate": "2026-09-08T18:39:08.588Z",
+      "status": "active",
+      "history": [],
+      "createdAt": "2026-09-01T18:39:08.588Z",
+      "updatedAt": "2026-09-01T18:39:08.588Z"
+    },
+    {
+      "id": "off-tx2-1788287781925",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 58000,
+      "currency": "USD",
+      "type": "COUNTER_OFFER",
+      "status": "PENDING",
+      "createdAt": "2026-09-01T18:36:21.925Z"
+    },
+    {
+      "id": "off-tx1-1788287781924",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 55000,
+      "currency": "USD",
+      "type": "INBOUND_INITIAL",
+      "status": "PENDING",
+      "createdAt": "2026-09-01T18:36:21.924Z"
+    },
+    {
+      "id": "off-tx2-1788287769089",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 58000,
+      "currency": "USD",
+      "type": "COUNTER_OFFER",
+      "status": "PENDING",
+      "createdAt": "2026-09-01T18:36:09.089Z"
+    },
+    {
+      "id": "off-tx1-1788287769088",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 55000,
+      "currency": "USD",
+      "type": "INBOUND_INITIAL",
+      "status": "PENDING",
+      "createdAt": "2026-09-01T18:36:09.088Z"
+    },
+    {
+      "id": "off-tx2-1788287741851",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 58000,
+      "currency": "USD",
+      "type": "COUNTER_OFFER",
+      "status": "PENDING",
+      "createdAt": "2026-09-01T18:35:41.851Z"
+    },
+    {
+      "id": "off-tx1-1788287741850",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 55000,
+      "currency": "USD",
+      "type": "INBOUND_INITIAL",
+      "status": "PENDING",
+      "createdAt": "2026-09-01T18:35:41.850Z"
+    },
+    {
+      "id": "off-tx2-1788287716328",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 58000,
+      "currency": "USD",
+      "type": "COUNTER_OFFER",
+      "status": "PENDING",
+      "createdAt": "2026-09-01T18:35:16.328Z"
+    },
+    {
+      "id": "off-tx1-1788287716327",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 55000,
+      "currency": "USD",
+      "type": "INBOUND_INITIAL",
+      "status": "PENDING",
+      "createdAt": "2026-09-01T18:35:16.327Z"
+    },
+    {
+      "id": "off-1",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "amount": 52000,
+      "currency": "USD",
+      "upfrontCash": 52000,
+      "earnoutAmount": 0,
+      "earnoutTerms": "None - 100% Cash at Closing via Escrow.com",
+      "paymentSchedule": "100% Upfront",
+      "transitionSupportDays": 30,
+      "nonCompeteMonths": 12,
+      "assetsIncluded": [
+        "Domain (devpulse-ai.io) & DNS assets",
+        "GitHub Organizations, Private Repositories & CI workflows",
+        "Production PostgreSQL & Redis AWS infrastructure",
+        "Stripe customer accounts & recurring subscription contracts",
+        "Registered trademarks and brand assets"
+      ],
+      "exclusivityDays": 21,
+      "expirationDate": "2026-09-10T23:59:59.000Z",
+      "status": "pending_approval",
+      "history": [
+        {
+          "id": "hist-1",
+          "timestamp": "2026-08-24T14:00:00.000Z",
+          "sender": "BUYER",
+          "amount": 45000,
+          "upfrontCash": 45000,
+          "earnoutAmount": 0,
+          "transitionSupportDays": 30,
+          "nonCompeteMonths": 12,
+          "exclusivityDays": 30,
+          "termsSummary": "Initial proposal of $45k all cash.",
+          "status": "COUNTERED"
+        },
+        {
+          "id": "hist-2",
+          "timestamp": "2026-08-26T11:00:00.000Z",
+          "sender": "AI_AGENT",
+          "amount": 56000,
+          "upfrontCash": 56000,
+          "earnoutAmount": 0,
+          "transitionSupportDays": 30,
+          "nonCompeteMonths": 12,
+          "exclusivityDays": 21,
+          "termsSummary": "AI Counter-offer anchored on 68% YoY growth and verified MRR.",
+          "status": "COUNTERED"
+        },
+        {
+          "id": "hist-3",
+          "timestamp": "2026-08-29T16:30:00.000Z",
+          "sender": "BUYER",
+          "amount": 52000,
+          "upfrontCash": 52000,
+          "earnoutAmount": 0,
+          "transitionSupportDays": 30,
+          "nonCompeteMonths": 12,
+          "exclusivityDays": 21,
+          "termsSummary": "Revised all-cash offer of $52,000 with 21-day exclusivity.",
+          "status": "PENDING"
+        }
+      ],
+      "createdAt": "2026-08-24T14:00:00.000Z",
+      "updatedAt": "2026-08-29T16:30:00.000Z"
+    },
+    {
+      "id": "off-2",
+      "dealId": "deal-3",
+      "projectId": "proj-1",
+      "buyerId": "buyer-3",
+      "amount": 47000,
+      "currency": "USD",
+      "upfrontCash": 35000,
+      "earnoutAmount": 12000,
+      "earnoutTerms": "$12,000 tied to maintaining >$5,500 MRR over 6 months post-closing.",
+      "paymentSchedule": "70% Upfront / 30% 12-Mo Earnout",
+      "transitionSupportDays": 60,
+      "nonCompeteMonths": 24,
+      "assetsIncluded": [
+        "All software, codebases, domains, customer database"
+      ],
+      "exclusivityDays": 30,
+      "expirationDate": "2026-09-05T23:59:59.000Z",
+      "status": "active",
+      "history": [
+        {
+          "id": "hist-4",
+          "timestamp": "2026-08-28T09:30:00.000Z",
+          "sender": "BUYER",
+          "amount": 47000,
+          "upfrontCash": 35000,
+          "earnoutAmount": 12000,
+          "transitionSupportDays": 60,
+          "nonCompeteMonths": 24,
+          "exclusivityDays": 30,
+          "termsSummary": "$35k cash + $12k earnout with 60-day transition.",
+          "status": "PENDING"
+        }
+      ],
+      "createdAt": "2026-08-28T09:30:00.000Z",
+      "updatedAt": "2026-08-28T09:30:00.000Z"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "appr-1",
+      "workspaceId": "ws-1",
+      "projectId": "proj-1",
+      "dealId": "deal-1",
+      "buyerId": "buyer-1",
+      "actionType": "ACCEPT_OFFER",
+      "title": "Approve $52,000 Cash Acquisition Offer from Datadog Ventures",
+      "description": "Datadog has submitted an all-cash $52,000 purchase proposal with 100% upfront escrow funding. This is above your hard floor of $48,000 and within 7% of your $56,000 target.",
+      "amount": 52000,
+      "riskLevel": "LOW",
+      "aiRecommendation": "RECOMMEND APPROVAL: Buyer has 100% closing track record, zero earnout conditions, and closing window is rapid (21 days).",
+      "reason": "Offer valuation aligns with 4.2x ARR and 5.4x SDE with immediate cash settlement.",
+      "status": "PENDING",
+      "policy": "APPROVAL_REQUIRED",
+      "payload": {
+        "offerId": "off-1",
+        "dealId": "deal-1",
+        "amount": 52000
+      },
+      "requestedAt": "2026-08-30T10:00:00.000Z"
+    },
+    {
+      "id": "appr-2",
+      "workspaceId": "ws-1",
+      "projectId": "proj-1",
+      "dealId": "deal-1",
+      "buyerId": "buyer-1",
+      "actionType": "GRANT_DATA_ROOM",
+      "title": "Grant Virtual Data Room (VDR) Access to Datadog Due Diligence Team",
+      "description": "Datadog signed mutual NDA #NDA-2026-004. Authorize release of audited financial statements, Cap Table, and cloud infrastructure costs.",
+      "riskLevel": "MEDIUM",
+      "aiRecommendation": "RECOMMEND APPROVAL: Verified mutual NDA on file. Enable watermarked View-Only permission mode.",
+      "reason": "Required step to finalize technical due diligence before closing.",
+      "status": "APPROVED",
+      "policy": "APPROVAL_REQUIRED",
+      "payload": {
+        "buyerId": "buyer-1",
+        "vdrAccessLevel": "VIEW_ONLY"
+      },
+      "requestedAt": "2026-08-29T18:00:00.000Z",
+      "resolvedAt": "2026-08-30T09:00:00.000Z",
+      "resolvedBy": "Farhan Al-Mansoor"
+    },
+    {
+      "id": "appr-3",
+      "workspaceId": "ws-1",
+      "projectId": "proj-2",
+      "dealId": "deal-2",
+      "buyerId": "buyer-2",
+      "actionType": "SEND_FINANCIALS",
+      "title": "Release Granular Trailing-12-Months Financials to Stripe Capital",
+      "description": "Stripe M&A requested customer cohort retention breakdown and merchant churn statistics for FinMatrix API.",
+      "riskLevel": "MEDIUM",
+      "aiRecommendation": "RECOMMEND APPROVAL: Stripe is a verified high-reputation corporate buyer with active NDA.",
+      "reason": "Advances deal from QUALIFIED to FORMAL LOI stage.",
+      "status": "PENDING",
+      "policy": "APPROVAL_REQUIRED",
+      "payload": {
+        "buyerId": "buyer-2",
+        "documentType": "FINANCIAL_COHORTS"
+      },
+      "requestedAt": "2026-08-30T14:30:00.000Z"
+    }
+  ],
+  "vdrFolders": [
+    {
+      "id": "fld-1",
+      "name": "Executive Summary & Overview",
+      "category": "Executive Summary",
+      "fileCount": 2
+    },
+    {
+      "id": "fld-2",
+      "name": "Product & Codebase Architecture",
+      "category": "Technology",
+      "fileCount": 3
+    },
+    {
+      "id": "fld-3",
+      "name": "Financial Statements & Audits",
+      "category": "Financial",
+      "fileCount": 4
+    },
+    {
+      "id": "fld-4",
+      "name": "Analytics & Cohorts",
+      "category": "Analytics",
+      "fileCount": 2
+    },
+    {
+      "id": "fld-5",
+      "name": "Legal, IP & Trademarks",
+      "category": "Legal",
+      "fileCount": 3
+    },
+    {
+      "id": "fld-6",
+      "name": "Cloud & Infrastructure Costs",
+      "category": "Infrastructure",
+      "fileCount": 2
+    }
+  ],
+  "vdrFiles": [
+    {
+      "id": "vf-1",
+      "folderId": "fld-1",
+      "name": "DevPulse AI - Confidential Executive Teaser.pdf",
+      "category": "Executive Summary",
+      "size": "2.8 MB",
+      "permissionLevel": "VIEW_ONLY",
+      "url": "/vdr/devpulse-executive-teaser.pdf",
+      "watermarkEnabled": true,
+      "uploadedAt": "2026-08-12T10:00:00.000Z"
+    },
+    {
+      "id": "vf-2",
+      "folderId": "fld-2",
+      "name": "System Architecture & Microservices Topology 2026.png",
+      "category": "Technology",
+      "size": "4.1 MB",
+      "permissionLevel": "VIEW_ONLY",
+      "url": "/vdr/devpulse-architecture.png",
+      "watermarkEnabled": true,
+      "uploadedAt": "2026-08-12T10:15:00.000Z"
+    },
+    {
+      "id": "vf-3",
+      "folderId": "fld-3",
+      "name": "Audited Trailing 12-Month P&L Statement (Stripe Verified).xlsx",
+      "category": "Financial",
+      "size": "1.4 MB",
+      "permissionLevel": "DOWNLOAD_ALLOWED",
+      "url": "/vdr/devpulse-pl-statement.xlsx",
+      "watermarkEnabled": true,
+      "uploadedAt": "2026-08-14T11:00:00.000Z"
+    },
+    {
+      "id": "vf-4",
+      "folderId": "fld-5",
+      "name": "IP Assignment & Founder Chain of Title Warranty.pdf",
+      "category": "Legal",
+      "size": "1.1 MB",
+      "permissionLevel": "DOWNLOAD_ALLOWED",
+      "url": "/vdr/ip-assignment-warranty.pdf",
+      "watermarkEnabled": true,
+      "uploadedAt": "2026-08-15T09:00:00.000Z"
+    }
+  ],
+  "vdrAccessLogs": [
+    {
+      "id": "vlog-1",
+      "projectId": "proj-1",
+      "fileId": "vf-1",
+      "fileName": "DevPulse AI - Confidential Executive Teaser.pdf",
+      "buyerId": "buyer-1",
+      "buyerName": "Datadog Ventures",
+      "action": "VIEW",
+      "timestamp": "2026-08-30T11:20:00.000Z",
+      "ipAddress": "199.167.211.45"
+    },
+    {
+      "id": "vlog-2",
+      "projectId": "proj-1",
+      "fileId": "vf-3",
+      "fileName": "Audited Trailing 12-Month P&L Statement.xlsx",
+      "buyerId": "buyer-1",
+      "buyerName": "Datadog Ventures",
+      "action": "DOWNLOAD",
+      "timestamp": "2026-08-30T11:45:00.000Z",
+      "ipAddress": "199.167.211.45"
+    }
+  ],
+  "ndas": [
+    {
+      "id": "nda-1",
+      "projectId": "proj-1",
+      "buyerId": "buyer-1",
+      "buyerName": "Datadog Ventures / M&A",
+      "buyerEmail": "corpdev@datadoghq.com",
+      "status": "SIGNED",
+      "terms": "Mutual 24-Month Non-Disclosure Agreement governing confidential trade secrets, financial records, and source code architecture for Project DevPulse AI.",
+      "documentUrl": "/docs/nda-signed-datadog.pdf",
+      "requestedAt": "2026-08-28T10:00:00.000Z",
+      "signedAt": "2026-08-29T14:30:00.000Z",
+      "expiresAt": "2028-08-29T14:30:00.000Z"
+    },
+    {
+      "id": "nda-2",
+      "projectId": "proj-2",
+      "buyerId": "buyer-2",
+      "buyerName": "Stripe Capital & M&A",
+      "buyerEmail": "elena.rostova@stripe.com",
+      "status": "SENT",
+      "terms": "Standard Mutual Corporate M&A Non-Disclosure Agreement for FinMatrix API valuation & technical audit.",
+      "requestedAt": "2026-08-30T12:00:00.000Z",
+      "expiresAt": "2028-08-30T12:00:00.000Z"
+    }
+  ],
+  "dueDiligence": [
+    {
+      "id": "dd-1",
+      "pillar": "Product",
+      "title": "Active Product Stability & Core Feature Completeness",
+      "description": "Verify uptime SLA (>99.9%), open GitHub issues count, and user feature satisfaction.",
+      "status": "VERIFIED",
+      "notes": "99.98% uptime over trailing 90 days. Zero open critical bugs in repository.",
+      "buyerQuestions": [
+        "What is the customer feature request backlog prioritization?"
+      ]
+    },
+    {
+      "id": "dd-2",
+      "pillar": "Technology",
+      "title": "Codebase Quality, Test Coverage & Dependency Audits",
+      "description": "Audit TypeScript test suite, AST parsing efficiency, and third-party NPM vulnerabilities.",
+      "status": "VERIFIED",
+      "notes": "84% automated unit test coverage. Zero High/Critical CVE vulnerabilities in npm audit.",
+      "buyerQuestions": [
+        "How is database schema migration handled during live deployment?"
+      ]
+    },
+    {
+      "id": "dd-3",
+      "pillar": "Financials",
+      "title": "Revenue Verification & Stripe Audited P&L",
+      "description": "Correlate Stripe monthly subscription payouts with bank statements.",
+      "status": "VERIFIED",
+      "notes": "Stripe balance exports match 100% to monthly bank deposits.",
+      "buyerQuestions": [
+        "What percentage of revenue is paid annually vs monthly?"
+      ]
+    },
+    {
+      "id": "dd-4",
+      "pillar": "Legal",
+      "title": "Intellectual Property Chain of Title & Trademark Rights",
+      "description": "Ensure 100% of founder IP assignment agreements are legally signed with zero external contractor claims.",
+      "status": "VERIFIED",
+      "notes": "Executed clean IP Assignment documents on file in Virtual Data Room.",
+      "buyerQuestions": [
+        "Are there any pending third-party patent or copyright claims? (Answer: None)"
+      ]
+    },
+    {
+      "id": "dd-5",
+      "pillar": "Infrastructure",
+      "title": "Cloud Cost Structure & Multi-AZ Disaster Recovery",
+      "description": "Check AWS/GCP monthly billing invoices and backup snapshot automation.",
+      "status": "ACTION_REQUIRED",
+      "notes": "Monthly AWS bill is healthy ($1,400/mo) but secondary failover region setup is pending.",
+      "buyerQuestions": [
+        "Can hosting costs be reduced under buyer enterprise AWS savings plan?"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent-deal-manager",
+      "name": "Deal Manager Agent",
+      "role": "Chief Autonomous Deal Orchestrator",
+      "description": "Supervises the end-to-end deal execution pipeline from listing to asset handover.",
+      "capabilities": [
+        "State Machine Management",
+        "Human-in-the-Loop Routing",
+        "Deal Velocity Optimization"
+      ],
+      "tools": [
+        "CRM Tool",
+        "Notification Tool",
+        "Analytics Tool"
+      ],
+      "status": "ACTIVE",
+      "version": "v3.2.0",
+      "runsCount": 142,
+      "successRate": 99.2
+    },
+    {
+      "id": "agent-research",
+      "name": "Research Agent",
+      "role": "Market & Industry Intelligence Specialist",
+      "description": "Scans sector acquisition multiples, competitor landscapes, and industry demand patterns.",
+      "capabilities": [
+        "Market Trend Analysis",
+        "Multiples Benchmarking",
+        "Truth Policy Enforcement"
+      ],
+      "tools": [
+        "Web Research Tool",
+        "Knowledge Base Tool"
+      ],
+      "status": "IDLE",
+      "version": "v3.1.0",
+      "runsCount": 88,
+      "successRate": 98.7
+    },
+    {
+      "id": "agent-project-analyst",
+      "name": "Project Analyst Agent",
+      "role": "Technical & Business Model Auditor",
+      "description": "Evaluates codebase structure, business model moats, and generates quantitative scores.",
+      "capabilities": [
+        "AST Code Evaluation",
+        "Moat Analysis",
+        "Score Calibration"
+      ],
+      "tools": [
+        "Valuation Tool",
+        "Document Tool"
+      ],
+      "status": "IDLE",
+      "version": "v3.2.0",
+      "runsCount": 76,
+      "successRate": 99.1
+    },
+    {
+      "id": "agent-valuation",
+      "name": "Valuation Agent",
+      "role": "Certified M&A Appraiser",
+      "description": "Calculates multi-method valuation ranges, revenue/SDE multiples, and pricing recommendations.",
+      "capabilities": [
+        "Multi-Method Valuation",
+        "Multiple Weighting",
+        "Strategic Premium Modeling"
+      ],
+      "tools": [
+        "Valuation Tool",
+        "Analytics Tool"
+      ],
+      "status": "IDLE",
+      "version": "v3.3.0",
+      "runsCount": 65,
+      "successRate": 99.5
+    },
+    {
+      "id": "agent-buyer-discovery",
+      "name": "Buyer Discovery Agent",
+      "role": "Strategic Acquirer Prospector",
+      "description": "Identifies technology companies, PE funds, and corporate acquirers matching asset criteria.",
+      "capabilities": [
+        "Corporate Development Discovery",
+        "Thesis Matching",
+        "Decision Maker Mapping"
+      ],
+      "tools": [
+        "Buyer Search Tool",
+        "Web Research Tool"
+      ],
+      "status": "ACTIVE",
+      "version": "v3.2.0",
+      "runsCount": 112,
+      "successRate": 97.9
+    },
+    {
+      "id": "agent-buyer-intelligence",
+      "name": "Buyer Intelligence Agent",
+      "role": "Acquirer Synergy Analyst",
+      "description": "Analyzes strategic rationale, integration roadmaps, and probability of acquisition.",
+      "capabilities": [
+        "Synergy Quantification",
+        "Integration Modeling",
+        "Budget Estimation"
+      ],
+      "tools": [
+        "CRM Tool",
+        "Knowledge Base Tool"
+      ],
+      "status": "IDLE",
+      "version": "v3.0.0",
+      "runsCount": 94,
+      "successRate": 98.4
+    },
+    {
+      "id": "agent-matching",
+      "name": "Matching Agent",
+      "role": "Precision Deal Matchmaker",
+      "description": "Calculates 8-factor compatibility scores (0-100) between projects and prospective buyers.",
+      "capabilities": [
+        "Multi-Factor Scoring",
+        "Fit Ranking",
+        "Synergy Rationale"
+      ],
+      "tools": [
+        "CRM Tool",
+        "Analytics Tool"
+      ],
+      "status": "ACTIVE",
+      "version": "v3.2.0",
+      "runsCount": 130,
+      "successRate": 99
+    },
+    {
+      "id": "agent-outreach",
+      "name": "Outreach Agent",
+      "role": "Personalized M&A Pitch Architect",
+      "description": "Generates bespoke, high-conversion outreach emails tailored to each target company.",
+      "capabilities": [
+        "Bespoke Copy Generation",
+        "Decision Maker Personalization",
+        "Anti-Spam Safeguards"
+      ],
+      "tools": [
+        "Email Tool",
+        "CRM Tool"
+      ],
+      "status": "PROCESSING",
+      "version": "v3.4.0",
+      "runsCount": 210,
+      "successRate": 98.6
+    },
+    {
+      "id": "agent-email",
+      "name": "Email Agent",
+      "role": "Autonomous Inbound Communications Specialist",
+      "description": "Reads inbound buyer emails, classifies intent, extracts offers/questions, and drafts replies.",
+      "capabilities": [
+        "Intent Classification",
+        "Question Extraction",
+        "Stop Policy Enforcement"
+      ],
+      "tools": [
+        "Email Tool",
+        "CRM Tool",
+        "Notification Tool"
+      ],
+      "status": "ACTIVE",
+      "version": "v3.4.0",
+      "runsCount": 340,
+      "successRate": 99.4
+    },
+    {
+      "id": "agent-negotiation",
+      "name": "Negotiation Agent",
+      "role": "Deal Terms & Price Strategist",
+      "description": "Negotiates valuation, payment schedules, earnouts, and founder transition within seller boundaries.",
+      "capabilities": [
+        "Boundary Enforcement",
+        "Non-Price Term Structuring",
+        "Leverage Calculation"
+      ],
+      "tools": [
+        "Valuation Tool",
+        "CRM Tool",
+        "Notification Tool"
+      ],
+      "status": "PROCESSING",
+      "version": "v3.5.0",
+      "runsCount": 95,
+      "successRate": 99.1
+    },
+    {
+      "id": "agent-due-diligence",
+      "name": "Due Diligence Agent",
+      "role": "10-Pillar M&A Auditor",
+      "description": "Performs pre-sale risk scanning, identifies missing documentation, and prepares buyer Q&As.",
+      "capabilities": [
+        "Risk Identification",
+        "Checklist Audit",
+        "Missing Item Detection"
+      ],
+      "tools": [
+        "Document Tool",
+        "Data Room Tool"
+      ],
+      "status": "IDLE",
+      "version": "v3.1.0",
+      "runsCount": 52,
+      "successRate": 98.9
+    },
+    {
+      "id": "agent-document",
+      "name": "Document Agent",
+      "role": "M&A Legal & NDA Drafter",
+      "description": "Generates Executive Summaries, Teasers, NDAs, and asset purchase agreements.",
+      "capabilities": [
+        "NDA Drafting",
+        "Teaser Formatting",
+        "Agreement Synthesis"
+      ],
+      "tools": [
+        "Document Tool",
+        "Data Room Tool"
+      ],
+      "status": "IDLE",
+      "version": "v3.0.0",
+      "runsCount": 84,
+      "successRate": 99.6
+    },
+    {
+      "id": "agent-risk",
+      "name": "Risk Agent",
+      "role": "Anti-Fraud & Security Guardian",
+      "description": "Detects suspicious buyer patterns, prompt injection attacks, and unverified data requests.",
+      "capabilities": [
+        "Fraud Heuristics",
+        "Prompt Injection Defense",
+        "Data Leak Prevention"
+      ],
+      "tools": [
+        "Notification Tool",
+        "Analytics Tool"
+      ],
+      "status": "ACTIVE",
+      "version": "v3.3.0",
+      "runsCount": 420,
+      "successRate": 99.9
+    },
+    {
+      "id": "agent-closing",
+      "name": "Closing Agent",
+      "role": "Escrow & Handover Coordinator",
+      "description": "Manages closing milestone checklists, domain transfers, and final handover certificates.",
+      "capabilities": [
+        "Escrow Verification",
+        "Asset Transfer Audit",
+        "Completion Certification"
+      ],
+      "tools": [
+        "Data Room Tool",
+        "Notification Tool",
+        "CRM Tool"
+      ],
+      "status": "IDLE",
+      "version": "v3.2.0",
+      "runsCount": 28,
+      "successRate": 100
+    },
+    {
+      "id": "agent-analytics",
+      "name": "Analytics Agent",
+      "role": "M&A Portfolio & Token Telemetry Engine",
+      "description": "Aggregates deal velocity, buyer conversion funnels, and token cost economics.",
+      "capabilities": [
+        "Funnel Analysis",
+        "AI Token Accounting",
+        "Portfolio Optimization"
+      ],
+      "tools": [
+        "Analytics Tool"
+      ],
+      "status": "ACTIVE",
+      "version": "v3.1.0",
+      "runsCount": 190,
+      "successRate": 99.8
+    }
+  ],
+  "missions": [
+    {
+      "id": "mis-1",
+      "workspaceId": "ws-1",
+      "title": "Execute DevPulse AI Strategic Sale & Buyer Outreach Campaign",
+      "prompt": "Identify top 5 strategic buyers for DevPulse AI, calculate synergy scores, prepare personalized outreach, and start outreach upon human approval.",
+      "status": "RUNNING",
+      "progressPercent": 75,
+      "tasks": [
+        {
+          "id": "mt-1",
+          "missionId": "mis-1",
+          "agentId": "agent-research",
+          "toolName": "Web Research Tool",
+          "title": "Benchmark M&A Multiples for Developer Tool SaaS",
+          "description": "Gather verified transaction multiples for software assets with $75k ARR.",
+          "dependencies": [],
+          "status": "COMPLETED",
+          "logs": [
+            "Querying SaaS multiples database...",
+            "Identified 4.5x median ARR multiple.",
+            "Completed with 98% confidence."
+          ],
+          "startedAt": "2026-08-30T09:00:00.000Z",
+          "completedAt": "2026-08-30T09:02:00.000Z"
+        },
+        {
+          "id": "mt-2",
+          "missionId": "mis-1",
+          "agentId": "agent-buyer-discovery",
+          "toolName": "Buyer Search Tool",
+          "title": "Discover High-Fit Corporate Acquirers",
+          "description": "Identified Datadog, Stripe, Vercel, and SaaSGrowth Partners.",
+          "dependencies": [
+            "mt-1"
+          ],
+          "status": "COMPLETED",
+          "logs": [
+            "Scanned corporate M&A databases.",
+            "Mapped 4 prospective corporate entities with >$50k budget."
+          ],
+          "startedAt": "2026-08-30T09:02:10.000Z",
+          "completedAt": "2026-08-30T09:04:30.000Z"
+        },
+        {
+          "id": "mt-3",
+          "missionId": "mis-1",
+          "agentId": "agent-outreach",
+          "toolName": "Email Tool",
+          "title": "Generate Personalized Pitches & Decision Maker Emails",
+          "description": "Crafted bespoke value propositions highlighting AST speed and zero-friction GitHub integration.",
+          "dependencies": [
+            "mt-2"
+          ],
+          "status": "COMPLETED",
+          "logs": [
+            "Generated tailored pitch for Alexandre Renard at Datadog.",
+            "Generated tailored pitch for Elena Rostova at Stripe."
+          ],
+          "startedAt": "2026-08-30T09:05:00.000Z",
+          "completedAt": "2026-08-30T09:07:00.000Z"
+        },
+        {
+          "id": "mt-4",
+          "missionId": "mis-1",
+          "agentId": "agent-deal-manager",
+          "toolName": "Notification Tool",
+          "title": "Human-in-the-Loop Offer Approval Interception",
+          "description": "Awaiting founder review of $52,000 cash offer in Human Approval Center.",
+          "dependencies": [
+            "mt-3"
+          ],
+          "status": "RUNNING",
+          "logs": [
+            "Offer received from Datadog ($52,000). Intercepted for mandatory Human Approval.",
+            "Awaiting user sign-off."
+          ],
+          "startedAt": "2026-08-30T10:00:00.000Z"
+        }
+      ],
+      "createdAt": "2026-08-30T08:59:00.000Z"
+    }
+  ],
+  "riskEvents": [
+    {
+      "id": "risk-1",
+      "workspaceId": "ws-1",
+      "dealId": "deal-3",
+      "buyerId": "buyer-3",
+      "severity": "LOW",
+      "category": "UNREALISTIC_TERMS",
+      "title": "Extended Earnout Term Proposed by PE Buyer",
+      "description": "Buyer proposed a 24-month non-compete and 30% earnout structure. Risk Agent flagged for founder review.",
+      "mitigationRecommendation": "Negotiate earnout down to 12 months with objective revenue milestones or counter with 100% upfront cash.",
+      "status": "ACTIVE",
+      "timestamp": "2026-08-28T10:00:00.000Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud-1788287998259-e8kf",
+      "workspaceId": "ws-1",
+      "actor": "Governance Gatekeeper",
+      "actorType": "SYSTEM",
+      "action": "FIRST_LIVE_DEAL_GATE_EVALUATED",
+      "target": "deal-1",
+      "details": "Gate evaluation completed: [READY FOR FIRST REAL COMMERCIAL TRANSACTION] (20/20 Criteria Verified, 100% Provenance Integrity).",
+      "result": "SUCCESS",
+      "timestamp": "2026-09-01T18:39:58.259Z"
+    },
+    {
+      "id": "aud-1788287994974-b2bt",
+      "workspaceId": "ws-1",
+      "actor": "Governance Gatekeeper",
+      "actorType": "SYSTEM",
+      "action": "FIRST_LIVE_DEAL_GATE_EVALUATED",
+      "target": "deal-1",
+      "details": "Gate evaluation completed: [READY FOR FIRST REAL COMMERCIAL TRANSACTION] (20/20 Criteria Verified, 100% Provenance Integrity).",
+      "result": "SUCCESS",
+      "timestamp": "2026-09-01T18:39:54.974Z"
+    },
+    {
+      "id": "aud-1788287984271-568j",
+      "workspaceId": "ws-1",
+      "actor": "Governance Gatekeeper",
+      "actorType": "SYSTEM",
+      "action": "FIRST_LIVE_DEAL_GATE_EVALUATED",
+      "target": "deal-1",
+      "details": "Gate evaluation completed: [READY FOR FIRST REAL COMMERCIAL TRANSACTION] (20/20 Criteria Verified, 100% Provenance Integrity).",
+      "result": "SUCCESS",
+      "timestamp": "2026-09-01T18:39:44.271Z"
+    },
+    {
+      "id": "aud-1",
+      "workspaceId": "ws-1",
+      "actor": "Farhan Al-Mansoor",
+      "actorType": "USER",
+      "action": "APPROVE_DATA_ROOM_ACCESS",
+      "target": "Virtual Data Room / Datadog Ventures",
+      "tool": "Data Room Tool",
+      "details": "Approved View-Only access to confidential executive teaser and financial statements following executed NDA #NDA-2026-004.",
+      "result": "SUCCESS",
+      "timestamp": "2026-08-30T09:00:00.000Z"
+    },
+    {
+      "id": "aud-2",
+      "workspaceId": "ws-1",
+      "actor": "Negotiation Agent",
+      "actorType": "AGENT",
+      "action": "ANALYZE_INCOMING_OFFER",
+      "target": "Offer #off-1 ($52,000)",
+      "tool": "Valuation Tool",
+      "details": "Evaluated Datadog $52,000 offer against hard floor ($48,000) and target ($56,000). Dispatched approval ticket to Approval Center.",
+      "result": "SUCCESS",
+      "timestamp": "2026-08-30T10:00:00.000Z"
+    },
+    {
+      "id": "aud-3",
+      "workspaceId": "ws-1",
+      "actor": "Risk Agent",
+      "actorType": "AGENT",
+      "action": "SCAN_INBOUND_EMAIL",
+      "target": "Email #em-1",
+      "tool": "Risk Engine",
+      "details": "Scanned inbound message for prompt injection vectors and unauthorized data leak commands. 0 anomalies found.",
+      "result": "SUCCESS",
+      "timestamp": "2026-08-29T16:30:05.000Z"
+    }
+  ],
+  "aiUsages": [
+    {
+      "id": "ai-1",
+      "workspaceId": "ws-1",
+      "provider": "Gemini 3.7 Flash",
+      "tokensUsed": 1840,
+      "estimatedCostUsd": 0.0036,
+      "agentId": "agent-project-analyst",
+      "operation": "PROJECT_INTELLIGENCE_AUDIT",
+      "timestamp": "2026-08-30T08:30:00.000Z"
+    },
+    {
+      "id": "ai-2",
+      "workspaceId": "ws-1",
+      "provider": "Gemini 3.7 Flash",
+      "tokensUsed": 2420,
+      "estimatedCostUsd": 0.0048,
+      "agentId": "agent-negotiation",
+      "operation": "NEGOTIATION_STRATEGY_SYNTHESIS",
+      "timestamp": "2026-08-30T10:05:00.000Z"
+    },
+    {
+      "id": "ai-3",
+      "workspaceId": "ws-1",
+      "provider": "Gemini 3.7 Flash",
+      "tokensUsed": 1250,
+      "estimatedCostUsd": 0.0025,
+      "agentId": "agent-outreach",
+      "operation": "BESPOKE_OUTREACH_GENERATION",
+      "timestamp": "2026-08-30T09:06:00.000Z"
+    }
+  ],
+  "closingMilestones": [
+    {
+      "id": "cls-1",
+      "title": "Mutual Purchase Agreement & Escrow Deposit",
+      "category": "Escrow",
+      "status": "IN_PROGRESS",
+      "assignedTo": "Datadog Legal & Seller",
+      "verifiedBy": "Closing Agent",
+      "updatedAt": "2026-08-30T11:00:00.000Z"
+    },
+    {
+      "id": "cls-2",
+      "title": "Domain & DNS Ownership Transfer (devpulse-ai.io)",
+      "category": "Domain",
+      "status": "PENDING",
+      "assignedTo": "Seller",
+      "verifiedBy": "Closing Agent",
+      "updatedAt": "2026-08-30T11:00:00.000Z"
+    },
+    {
+      "id": "cls-3",
+      "title": "GitHub Organization & Source Code Repo Handover",
+      "category": "Repository",
+      "status": "PENDING",
+      "assignedTo": "Seller",
+      "verifiedBy": "Closing Agent",
+      "updatedAt": "2026-08-30T11:00:00.000Z"
+    },
+    {
+      "id": "cls-4",
+      "title": "AWS Cloud Account & PostgreSQL DB Migration",
+      "category": "Database",
+      "status": "PENDING",
+      "assignedTo": "Seller Tech Lead",
+      "verifiedBy": "Closing Agent",
+      "updatedAt": "2026-08-30T11:00:00.000Z"
+    },
+    {
+      "id": "cls-5",
+      "title": "Founder 30-Day Onboarding & Handover Training",
+      "category": "Documentation",
+      "status": "PENDING",
+      "assignedTo": "Seller",
+      "verifiedBy": "Deal Manager Agent",
+      "updatedAt": "2026-08-30T11:00:00.000Z"
+    }
+  ],
+  "sellerPolicies": [
+    {
+      "id": "sp-1",
+      "workspaceId": "ws-1",
+      "minimumPriceFloor": 48000,
+      "targetPrice": 56000,
+      "maxDiscountPercent": 15,
+      "allowedBuyerTypes": [
+        "Corporate Strategic",
+        "Private Equity",
+        "Family Office",
+        "Verified Tech Operator"
+      ],
+      "allowedCountries": [
+        "United States",
+        "United Kingdom",
+        "Germany",
+        "Canada",
+        "Singapore",
+        "European Union"
+      ],
+      "maxOutreachRatePerDay": 25,
+      "requireNdaForFinancials": true,
+      "requireHumanApprovalForPriceConcession": true,
+      "requireHumanApprovalForEscrow": true,
+      "autonomousNegotiationPriceFloor": 50000,
+      "updatedAt": "2026-08-30T10:00:00.000Z"
+    }
+  ],
+  "integrations": [
+    {
+      "id": "int-gemini",
+      "name": "Google Gemini 3.7 Flash API",
+      "category": "AI Provider",
+      "status": "CONNECTED",
+      "description": "Server-side LLM orchestration for valuation appraisals, multi-agent reasoning, intent classification, and deal coaching.",
+      "lastSync": "2026-08-30T11:45:00.000Z",
+      "details": "Active via GEMINI_API_KEY environment variable. 0 API throttling errors recorded."
+    },
+    {
+      "id": "int-email",
+      "name": "Corporate M&A Inbox & SMTP Bridge",
+      "category": "Email / OAuth",
+      "status": "CONNECTED",
+      "description": "Autonomous inbound webhook processing and automated outbound pitch deliverability.",
+      "lastSync": "2026-08-30T11:40:00.000Z",
+      "details": "Connected as deals@apexventures.io with DKIM/SPF verification passing."
+    },
+    {
+      "id": "int-escrow",
+      "name": "Escrow.com API Service",
+      "category": "Escrow & Settlement",
+      "status": "SANDBOX",
+      "description": "M&A milestone escrow, transaction inspection periods, and title disbursement contracts.",
+      "lastSync": "2026-08-30T10:15:00.000Z",
+      "details": "Running in Sandbox Mode. Production API key required for live wire settlements."
+    },
+    {
+      "id": "int-github",
+      "name": "GitHub Enterprise Org & Code Transfer",
+      "category": "Code & Repositories",
+      "status": "CONNECTED",
+      "description": "Automated repository ownership transfer, audit logs, and AST parsing.",
+      "lastSync": "2026-08-30T09:30:00.000Z",
+      "details": "OAuth App authorized with repository administration and secret scanning permissions."
+    },
+    {
+      "id": "int-dns",
+      "name": "Cloudflare / AWS Route53 DNS Registrar",
+      "category": "DNS & Domains",
+      "status": "CONNECTED",
+      "description": "Domain registrar transfer authorization code (EPP) generation and DNS records handover.",
+      "lastSync": "2026-08-30T08:00:00.000Z",
+      "details": "Domain devpulse-ai.io unlocked for designated buyer registrar push."
+    },
+    {
+      "id": "int-storage",
+      "name": "Encrypted VDR Vault & Watermark Engine",
+      "category": "Encrypted Storage",
+      "status": "CONNECTED",
+      "description": "AES-256 encrypted file store with dynamic dynamic buyer-tagged watermarking.",
+      "lastSync": "2026-08-30T11:50:00.000Z",
+      "details": "Active in secure isolated cloud bucket with automatic tamper-evident audit logging."
+    }
+  ],
+  "handoverSecrets": [
+    {
+      "id": "sec-1",
+      "workspaceId": "ws-1",
+      "projectId": "proj-1",
+      "title": "GitHub Organization Transfer Token",
+      "category": "Repository Access",
+      "description": "Admin invitation and ownership transfer code for github.com/apex-ventures/devpulse-core",
+      "isRevealed": true,
+      "maskedValue": "gho_••••••••••••••••••••••••••••••••••••39A2",
+      "secretValue": "gho_88faB399xKLP441920zmmQ100239A2",
+      "lastAccessedAt": "2026-08-30T10:00:00.000Z",
+      "accessCount": 2,
+      "verifiedByBuyer": false,
+      "revealedAt": "2026-09-01T18:35:16.399Z",
+      "revealedBy": "Buyer Representative (Alexandre Renard)"
+    },
+    {
+      "id": "sec-2",
+      "workspaceId": "ws-1",
+      "projectId": "proj-1",
+      "title": "Domain EPP / Auth-Code for devpulse-ai.io",
+      "category": "DNS Registrar",
+      "description": "Domain registrar transfer authorization key to move domain to Buyer account.",
+      "isRevealed": false,
+      "maskedValue": "EPP-••••-••••-8941",
+      "secretValue": "EPP-8842-9912-8941",
+      "accessCount": 0,
+      "verifiedByBuyer": false
+    },
+    {
+      "id": "sec-3",
+      "workspaceId": "ws-1",
+      "projectId": "proj-1",
+      "title": "PostgreSQL Production Root & Master Read-Replica",
+      "category": "Database Credentials",
+      "description": "Encrypted connection strings and master credentials for cloud database cluster.",
+      "isRevealed": false,
+      "maskedValue": "postgres://admin:••••••••••••@db-cluster.aws.internal:5432/devpulse_prod",
+      "secretValue": "postgres://admin:Nx99!K$Lpp2026@db-cluster.aws.internal:5432/devpulse_prod",
+      "accessCount": 0,
+      "verifiedByBuyer": false
+    },
+    {
+      "id": "sec-4",
+      "workspaceId": "ws-1",
+      "projectId": "proj-1",
+      "title": "Stripe Merchant Connect Account Transfer ID",
+      "category": "Stripe Account Transfer",
+      "description": "Stripe platform ownership migration link and sub-account transfer ID.",
+      "isRevealed": false,
+      "maskedValue": "acct_••••••••••••••••",
+      "secretValue": "acct_1NZ45M2eZvKYlo2C99",
+      "accessCount": 0,
+      "verifiedByBuyer": false
+    },
+    {
+      "id": "sec-test-1788287781972",
+      "projectId": "proj-1",
+      "title": "Hermetic Test Secret",
+      "category": "Repository Access",
+      "description": "Hermetic test secret",
+      "isRevealed": true,
+      "maskedValue": "sec-••••",
+      "secretValue": "secret_123",
+      "expiresAt": "2026-09-01T18:51:21.972Z",
+      "revealedAt": "2026-09-01T18:36:21.972Z",
+      "revealedBy": "Buyer Representative (Alexandre Renard)"
+    },
+    {
+      "id": "sec-test-1788287948631",
+      "projectId": "proj-1",
+      "title": "Hermetic Test Secret",
+      "category": "Repository Access",
+      "description": "Hermetic test secret",
+      "isRevealed": true,
+      "maskedValue": "sec-••••",
+      "secretValue": "secret_123",
+      "expiresAt": "2026-09-01T18:54:08.631Z",
+      "revealedAt": "2026-09-01T18:39:08.631Z",
+      "revealedBy": "Buyer Representative (Alexandre Renard)"
+    },
+    {
+      "id": "sec-test-1788288679391",
+      "projectId": "proj-1",
+      "title": "Hermetic Test Secret",
+      "category": "Repository Access",
+      "description": "Hermetic test secret",
+      "isRevealed": true,
+      "maskedValue": "sec-••••",
+      "secretValue": "secret_123",
+      "expiresAt": "2026-09-01T19:06:19.391Z",
+      "revealedAt": "2026-09-01T18:51:19.391Z",
+      "revealedBy": "Buyer Representative (Alexandre Renard)"
+    }
+  ],
+  "tools": [
+    {
+      "id": "tool-crm",
+      "name": "CRM Tool",
+      "category": "Intelligence",
+      "description": "Queries buyer pipelines, tracks contact histories, updates buyer scores, and orchestrates stages.",
+      "requiredPermissions": [
+        "CRM_READ",
+        "CRM_WRITE"
+      ],
+      "rateLimit": "120 req/min",
+      "status": "ONLINE",
+      "inputSchema": "{\"buyerId\": \"string\", \"updates\": \"object\"}",
+      "outputSchema": "{\"success\": true, \"buyer\": \"BuyerObject\"}"
+    },
+    {
+      "id": "tool-valuation",
+      "name": "Valuation Tool",
+      "category": "Intelligence",
+      "description": "Runs quantitative DCF, ARR Multiples, and SDE valuations with statistical confidence intervals.",
+      "requiredPermissions": [
+        "FINANCIALS_READ",
+        "VALUATION_GENERATE"
+      ],
+      "rateLimit": "60 req/min",
+      "status": "ONLINE",
+      "inputSchema": "{\"projectId\": \"string\", \"financials\": \"object\"}",
+      "outputSchema": "{\"valuation\": \"ValuationReport\"}"
+    },
+    {
+      "id": "tool-email",
+      "name": "Email Tool",
+      "category": "Communication",
+      "description": "Dispatches targeted outbound pitches and parses incoming communications with intent extraction.",
+      "requiredPermissions": [
+        "EMAIL_SEND",
+        "EMAIL_READ"
+      ],
+      "rateLimit": "40 req/min",
+      "status": "ONLINE",
+      "inputSchema": "{\"recipient\": \"string\", \"subject\": \"string\", \"body\": \"string\"}",
+      "outputSchema": "{\"messageId\": \"string\", \"status\": \"sent\"}"
+    },
+    {
+      "id": "tool-web-research",
+      "name": "Web Research Tool",
+      "category": "Intelligence",
+      "description": "Conducts live web lookups on acquirer portfolios, recent M&A transactions, and technology trends.",
+      "requiredPermissions": [
+        "INTERNET_ACCESS"
+      ],
+      "rateLimit": "30 req/min",
+      "status": "ONLINE",
+      "inputSchema": "{\"query\": \"string\", \"domain\": \"string\"}",
+      "outputSchema": "{\"results\": \"array\"}"
+    },
+    {
+      "id": "tool-document",
+      "name": "Document Tool",
+      "category": "Legal & VDR",
+      "description": "Generates legally binding NDAs, Executive Teasers, and Asset Purchase Agreement drafts.",
+      "requiredPermissions": [
+        "DOCUMENT_GENERATE"
+      ],
+      "rateLimit": "30 req/min",
+      "status": "ONLINE",
+      "inputSchema": "{\"template\": \"string\", \"variables\": \"object\"}",
+      "outputSchema": "{\"documentUrl\": \"string\", \"pageCount\": 4}"
+    },
+    {
+      "id": "tool-data-room",
+      "name": "Data Room Tool",
+      "category": "Legal & VDR",
+      "description": "Enforces NDA gatekeeping, dynamic watermark injection, and granular download permissions.",
+      "requiredPermissions": [
+        "VDR_ADMIN",
+        "VDR_READ"
+      ],
+      "rateLimit": "100 req/min",
+      "status": "ONLINE",
+      "inputSchema": "{\"fileId\": \"string\", \"buyerId\": \"string\", \"action\": \"VIEW|DOWNLOAD\"}",
+      "outputSchema": "{\"authorized\": true, \"watermarkedUrl\": \"string\"}"
+    },
+    {
+      "id": "tool-notification",
+      "name": "Notification Tool",
+      "category": "Communication",
+      "description": "Pushes high-priority alerts to Human-in-the-Loop Approval Center and Founder channels.",
+      "requiredPermissions": [
+        "NOTIFICATIONS_SEND"
+      ],
+      "rateLimit": "60 req/min",
+      "status": "ONLINE",
+      "inputSchema": "{\"title\": \"string\", \"message\": \"string\", \"urgency\": \"HIGH\"}",
+      "outputSchema": "{\"dispatched\": true}"
+    },
+    {
+      "id": "tool-analytics",
+      "name": "Analytics Tool",
+      "category": "Intelligence",
+      "description": "Aggregates deal probability, token spend telemetry, and pipeline velocity.",
+      "requiredPermissions": [
+        "METRICS_READ"
+      ],
+      "rateLimit": "120 req/min",
+      "status": "ONLINE",
+      "inputSchema": "{\"timeframe\": \"string\", \"workspaceId\": \"string\"}",
+      "outputSchema": "{\"metrics\": \"AnalyticsObject\"}"
+    },
+    {
+      "id": "tool-escrow",
+      "name": "Escrow & Settlement Tool",
+      "category": "Settlement",
+      "description": "Verifies earnest money deposits, title conditions, and milestone releases.",
+      "requiredPermissions": [
+        "ESCROW_VERIFY"
+      ],
+      "rateLimit": "20 req/min",
+      "status": "ONLINE",
+      "inputSchema": "{\"escrowId\": \"string\", \"action\": \"CHECK_STATUS\"}",
+      "outputSchema": "{\"status\": \"FUNDED\", \"amount\": 52000}"
+    },
+    {
+      "id": "tool-secrets",
+      "name": "Secrets Vault Tool",
+      "category": "Settlement",
+      "description": "Manages encrypted credential exchange with one-time view auditing and revocation.",
+      "requiredPermissions": [
+        "SECRETS_ADMIN"
+      ],
+      "rateLimit": "15 req/min",
+      "status": "ONLINE",
+      "inputSchema": "{\"secretId\": \"string\", \"actor\": \"string\"}",
+      "outputSchema": "{\"secret\": \"string\", \"auditLogged\": true}"
+    }
+  ],
+  "sellerVerifications": [
+    {
+      "id": "ver-1",
+      "sellerId": "usr-1",
+      "emailVerified": true,
+      "identityVerified": true,
+      "ownershipVerified": true,
+      "projectControlVerified": true,
+      "domainOwnershipVerified": true,
+      "repoOwnershipVerified": true,
+      "businessInfoVerified": true,
+      "verificationTier": "TIER_2_PROVEN",
+      "verifiedProvider": "Stripe Identity & DNS Proof",
+      "verifiedAt": "2026-08-20T10:00:00.000Z",
+      "notes": [
+        "Domain DNS TXT record validated: _nexa-verify-devpulse=verified-88914",
+        "GitHub repository admin webhook and commit signature verified",
+        "Stripe billing merchant account ownership confirmed"
+      ]
+    }
+  ],
+  "transactionChecklists": {
+    "deal-1": [
+      {
+        "id": "tc-1",
+        "stepNumber": 1,
+        "title": "Seller Identity & Asset Verification",
+        "stage": "DRAFT",
+        "status": "COMPLETED",
+        "completedAt": "2026-08-20T10:00:00.000Z",
+        "verifiedBy": "Nexa Governance Guard",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-2",
+        "stepNumber": 2,
+        "title": "M&A Valuation & Asking Price Floor ($48,000+ Enforced)",
+        "stage": "QUALIFIED",
+        "status": "COMPLETED",
+        "completedAt": "2026-08-21T14:30:00.000Z",
+        "verifiedBy": "Policy Engine",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-3",
+        "stepNumber": 3,
+        "title": "Buyer Profile & Financial Capacity Qualification",
+        "stage": "CONTACTED",
+        "status": "COMPLETED",
+        "completedAt": "2026-08-22T09:15:00.000Z",
+        "verifiedBy": "Buyer CRM AI",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-4",
+        "stepNumber": 4,
+        "title": "Mutual NDA Execution & Cryptographic Verification",
+        "stage": "NDA_SIGNED",
+        "status": "COMPLETED",
+        "completedAt": "2026-08-25T11:00:00.000Z",
+        "verifiedBy": "DocuSign / VDR Gate",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-5",
+        "stepNumber": 5,
+        "title": "Tiered Virtual Data Room Access Granted",
+        "stage": "DATA_ROOM",
+        "status": "COMPLETED",
+        "completedAt": "2026-08-25T11:30:00.000Z",
+        "verifiedBy": "VDR Engine",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-6",
+        "stepNumber": 6,
+        "title": "Letter of Intent (LOI) Offer Received & Verified ($52,000)",
+        "stage": "OFFER_RECEIVED",
+        "status": "COMPLETED",
+        "completedAt": "2026-08-28T16:00:00.000Z",
+        "verifiedBy": "Offer Registry",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-7",
+        "stepNumber": 7,
+        "title": "AI Negotiation Analysis & Human Policy Approval",
+        "stage": "NEGOTIATING",
+        "status": "COMPLETED",
+        "completedAt": "2026-08-29T10:00:00.000Z",
+        "verifiedBy": "Human Approval Center",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-8",
+        "stepNumber": 8,
+        "title": "Technical & Financial Due Diligence Audit (88% Cleared)",
+        "stage": "DUE_DILIGENCE",
+        "status": "IN_PROGRESS",
+        "verifiedBy": "Due Diligence Matrix",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-9",
+        "stepNumber": 9,
+        "title": "Asset Purchase Agreement (APA) Drafting & Legal Terms",
+        "stage": "PENDING_APPROVAL",
+        "status": "PENDING",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-10",
+        "stepNumber": 10,
+        "title": "Escrow Account Opened & Earnest Deposit Verified ($52,000)",
+        "stage": "CLOSING",
+        "status": "PENDING",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-11",
+        "stepNumber": 11,
+        "title": "100% Escrow Full Funding Confirmed via Webhook HMAC",
+        "stage": "CLOSING",
+        "status": "PENDING",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-12",
+        "stepNumber": 12,
+        "title": "One-Time Cryptographic Secrets Vault Access Grant",
+        "stage": "CLOSING",
+        "status": "PENDING",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-13",
+        "stepNumber": 13,
+        "title": "DNS / GitHub / Cloud Infrastructure Ownership Transfer",
+        "stage": "CLOSING",
+        "status": "PENDING",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-14",
+        "stepNumber": 14,
+        "title": "Buyer Verification & Milestone Completion Sign-Off",
+        "stage": "CLOSING",
+        "status": "PENDING",
+        "isImmutable": true
+      },
+      {
+        "id": "tc-15",
+        "stepNumber": 15,
+        "title": "Escrow Disbursement & Immutable Transaction Archival",
+        "stage": "COMPLETED",
+        "status": "PENDING",
+        "isImmutable": true
+      }
+    ]
+  },
+  "handoverPlans": {
+    "deal-1": [
+      {
+        "id": "hp-1",
+        "day": "Day 0",
+        "title": "Asset Purchase Agreement & Escrow Confirmation",
+        "category": "Credentials",
+        "description": "Confirm full escrow deposit funding and execute master APA agreement.",
+        "status": "COMPLETED",
+        "assignedParty": "JOINT"
+      },
+      {
+        "id": "hp-2",
+        "day": "Day 1",
+        "title": "Domain DNS & SSL Registrar Transfer",
+        "category": "Domain",
+        "description": "Initiate EPP auth-code transfer for devpulse-ai.io to Buyer Cloudflare / Namecheap account.",
+        "status": "IN_PROGRESS",
+        "assignedParty": "SELLER"
+      },
+      {
+        "id": "hp-3",
+        "day": "Day 3",
+        "title": "GitHub Organization & Source Code Ownership Transfer",
+        "category": "Repository",
+        "description": "Transfer primary GitHub repository devpulse-core ownership and revoke legacy tokens.",
+        "status": "PENDING",
+        "assignedParty": "SELLER"
+      },
+      {
+        "id": "hp-4",
+        "day": "Day 7",
+        "title": "Cloud Infrastructure & Database IAM Migration",
+        "category": "Infrastructure",
+        "description": "Migrate AWS / Supabase project ownership, rotate database master credentials, and verify production health.",
+        "status": "PENDING",
+        "assignedParty": "JOINT"
+      },
+      {
+        "id": "hp-5",
+        "day": "Day 14",
+        "title": "Stripe Billing Merchant Account Transfer",
+        "category": "Customer Transition",
+        "description": "Initiate Stripe account team member handover to retain active 2,400 developer subscriptions.",
+        "status": "PENDING",
+        "assignedParty": "SELLER"
+      },
+      {
+        "id": "hp-6",
+        "day": "Day 30",
+        "title": "Transition Support & Final Milestone Release",
+        "category": "Technical Support",
+        "description": "Complete 30-day technical consultation period and finalize remaining escrow release.",
+        "status": "PENDING",
+        "assignedParty": "JOINT"
+      }
+    ]
+  },
+  "transactionArchives": [
+    {
+      "id": "arch-sample",
+      "dealId": "deal-historical-0",
+      "projectId": "proj-historical-0",
+      "projectName": "CodeMetrics Enterprise (Prior Portfolio Exit)",
+      "buyerId": "buyer-historical-0",
+      "buyerName": "Datadog Ventures",
+      "sellerName": "Farhan Al-Mansoor",
+      "finalPrice": 85000,
+      "currency": "USD",
+      "closingDate": "2025-11-14T18:30:00.000Z",
+      "offersTimeline": [],
+      "approvalsSnapshot": [],
+      "dueDiligenceSnapshot": [],
+      "escrowReference": "ESCROW-COM-88391-RELEASED",
+      "handoverSecretsCount": 6,
+      "auditLogsCount": 48,
+      "sha256ProofHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "isReadOnly": true
+    },
+    {
+      "id": "arc-deal-1-1788288679407",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "projectName": "DevPulse AI",
+      "buyerId": "buyer-1",
+      "buyerName": "Datadog Ventures / M&A",
+      "sellerName": "Apex Capital Ventures",
+      "finalPrice": 58000,
+      "finalAmount": 58000,
+      "currency": "USD",
+      "closingDate": "2026-09-01T18:51:19.407Z",
+      "offersTimeline": [
+        {
+          "id": "off-tx2-1788288679345",
+          "dealId": "deal-1",
+          "projectId": "proj-1",
+          "buyerId": "buyer-1",
+          "amount": 58000,
+          "currency": "USD",
+          "upfrontCash": 58000,
+          "earnoutAmount": 0,
+          "earnoutTerms": "None",
+          "paymentSchedule": "100% Upfront",
+          "transitionSupportDays": 30,
+          "nonCompeteMonths": 12,
+          "assetsIncluded": [
+            "Code",
+            "Domain"
+          ],
+          "exclusivityDays": 21,
+          "expirationDate": "2026-09-08T18:51:19.345Z",
+          "status": "active",
+          "history": [],
+          "createdAt": "2026-09-01T18:51:19.345Z",
+          "updatedAt": "2026-09-01T18:51:19.345Z"
+        }
+      ],
+      "approvalsSnapshot": [],
+      "dueDiligenceSnapshot": [],
+      "escrowReference": "esc_nexa_deal-1",
+      "handoverSecretsCount": 5,
+      "auditLogsCount": 12,
+      "sha256ProofHash": "a9b02a3dff4a56268d73d34f6bb4e43d5035e8f21756b3a17d9a9a196ff79d15",
+      "sha256Hash": "a9b02a3dff4a56268d73d34f6bb4e43d5035e8f21756b3a17d9a9a196ff79d15",
+      "canonicalState": "{\"acceptedOfferId\":\"off-tx2-1788288679345\",\"buyerCompany\":\"Datadog Ventures / M&A\",\"buyerId\":\"buyer-1\",\"closedAt\":\"2026-09-01T18:51:19.407Z\",\"currency\":\"USD\",\"dealId\":\"deal-1\",\"finalAmount\":58000,\"financials\":{\"arr\":74400,\"monthlyRevenue\":6200,\"mrr\":6200},\"handoverMilestonesCount\":6,\"projectId\":\"proj-1\",\"projectName\":\"DevPulse AI\"}",
+      "isReadOnly": true
+    }
+  ],
+  "brokerageEconomics": [
+    {
+      "id": "econ-1",
+      "dealId": "deal-1",
+      "projectId": "proj-1",
+      "dealValue": 52000,
+      "feeModel": "SUCCESS_FEE",
+      "feePercentage": 5,
+      "minimumFee": 2500,
+      "platformFee": 2600,
+      "sellerFee": 2600,
+      "buyerFee": 0,
+      "estimatedRevenue": 2600,
+      "actualRevenue": 0,
+      "aiCost": 48.2,
+      "emailCost": 12.5,
+      "infraCost": 35,
+      "netMargin": 2504.3,
+      "netMarginPercentage": 96.3,
+      "status": "ESTIMATED"
+    }
+  ],
+  "launchChecklists": [
+    {
+      "id": "lc-1",
+      "title": "Multi-Tenant Workspace & Security Isolation",
+      "category": "Environment",
+      "status": "VERIFIED",
+      "details": "All queries scoped by workspace ID with zero cross-tenant leakage."
+    },
+    {
+      "id": "lc-2",
+      "title": "Absolute Minimum Price Governance ($48,000 Floor)",
+      "category": "Security & Governance",
+      "status": "VERIFIED",
+      "details": "Automated policy blocks any offer or concession below seller minimum."
+    },
+    {
+      "id": "lc-3",
+      "title": "Human-in-the-Loop Approval Center Enforcement",
+      "category": "Security & Governance",
+      "status": "VERIFIED",
+      "details": "High-risk actions require cryptographic human sign-off."
+    },
+    {
+      "id": "lc-4",
+      "title": "One-Time Secret Reveal & Audit Logging",
+      "category": "Security & Governance",
+      "status": "VERIFIED",
+      "details": "Secrets Vault masks sensitive keys with single-reveal defense."
+    },
+    {
+      "id": "lc-5",
+      "title": "HMAC Webhook Signature Verification for Escrow",
+      "category": "Integrations",
+      "status": "VERIFIED",
+      "details": "Escrow webhooks protected with SHA-256 HMAC digest validation."
+    },
+    {
+      "id": "lc-6",
+      "title": "Prompt Injection Defense & Risk Telemetry",
+      "category": "Security & Governance",
+      "status": "VERIFIED",
+      "details": "Real-time sanitization of inbound emails, missions, and buyer queries."
+    },
+    {
+      "id": "lc-7",
+      "title": "Tiered Virtual Data Room & Mandatory NDA Gating",
+      "category": "Workflows",
+      "status": "VERIFIED",
+      "details": "Confidential documents locked until verified NDA execution."
+    },
+    {
+      "id": "lc-8",
+      "title": "Buyer Qualification & Quality Scoring",
+      "category": "Workflows",
+      "status": "VERIFIED",
+      "details": "Automated 8-factor qualification with opt-out suppression safety."
+    },
+    {
+      "id": "lc-9",
+      "title": "M&A Asset Ownership & Domain Proof Verification",
+      "category": "Workflows",
+      "status": "VERIFIED",
+      "details": "DNS TXT and repository ownership verification checklists."
+    },
+    {
+      "id": "lc-10",
+      "title": "30-Day Post-Sale Handover Plan & Archive",
+      "category": "Workflows",
+      "status": "VERIFIED",
+      "details": "Structured operational milestones and immutable closing archive."
+    },
+    {
+      "id": "lc-11",
+      "title": "External Integrations Health & Outage Fallback",
+      "category": "Integrations",
+      "status": "VERIFIED",
+      "details": "Deterministic rule engine fallback when external APIs disconnect."
+    },
+    {
+      "id": "lc-12",
+      "title": "Brokerage Economics & Fee Tracking",
+      "category": "Environment",
+      "status": "VERIFIED",
+      "details": "Real-time success fee and net margin computation without direct payment processing."
+    },
+    {
+      "id": "lc-13",
+      "title": "Autonomy Level Controls (Manual / Assisted / Autonomous)",
+      "category": "Security & Governance",
+      "status": "VERIFIED",
+      "details": "Granular AI autonomy switch with safety floors."
+    },
+    {
+      "id": "lc-14",
+      "title": "Live Commercial Mode Isolation",
+      "category": "Environment",
+      "status": "VERIFIED",
+      "details": "Clear separation between Demo, Sandbox, and Live Commercial mode."
+    },
+    {
+      "id": "lc-15",
+      "title": "Executive M&A Seller Report Engine",
+      "category": "Workflows",
+      "status": "VERIFIED",
+      "details": "17-section institutional-grade acquisition report with export support."
+    },
+    {
+      "id": "lc-16",
+      "title": "Controlled First Deal Safeguards Active",
+      "category": "Security & Governance",
+      "status": "VERIFIED",
+      "details": "Enhanced monitoring and strict human approval for first transaction."
+    }
+  ],
+  "emailSuppressionList": [
+    "optout-unsub@competitor-corp.com"
+  ],
+  "agentMemory": {
+    "proj-1_valuation_anchor": {
+      "min": 48000,
+      "target": 56000,
+      "asking": 65000
+    },
+    "buyer-1_preferred_terms": {
+      "upfrontCashOnly": true,
+      "diligenceDays": 21
+    }
+  },
+  "sessions": [],
+  "webhookEvents": [
+    {
+      "id": "wh-1788288679386-B",
+      "provider": "STRIPE",
+      "eventId": "evt_conc_B_1788288679385",
+      "eventType": "invoice.paid",
+      "payload": {
+        "amount": 6200
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:51:19.386Z"
+    },
+    {
+      "id": "wh-1788288679385-A",
+      "provider": "ESCROW",
+      "eventId": "evt_conc_A_1788288679385",
+      "eventType": "disbursement.scheduled",
+      "payload": {
+        "dealId": "deal-1"
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:51:19.385Z"
+    },
+    {
+      "id": "wh-1788288679380-1",
+      "provider": "ESCROW",
+      "eventId": "evt_escrow_replay_1788288679380",
+      "eventType": "payment.funded",
+      "payload": {
+        "dealId": "deal-1",
+        "amount": 56000
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:51:19.380Z"
+    },
+    {
+      "id": "wh-1788287948627-B",
+      "provider": "STRIPE",
+      "eventId": "evt_conc_B_1788287948625",
+      "eventType": "invoice.paid",
+      "payload": {
+        "amount": 6200
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:39:08.627Z"
+    },
+    {
+      "id": "wh-1788287948625-A",
+      "provider": "ESCROW",
+      "eventId": "evt_conc_A_1788287948625",
+      "eventType": "disbursement.scheduled",
+      "payload": {
+        "dealId": "deal-1"
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:39:08.625Z"
+    },
+    {
+      "id": "wh-1788287948621-1",
+      "provider": "ESCROW",
+      "eventId": "evt_escrow_replay_1788287948621",
+      "eventType": "payment.funded",
+      "payload": {
+        "dealId": "deal-1",
+        "amount": 56000
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:39:08.621Z"
+    },
+    {
+      "id": "wh-1788287781967-B",
+      "provider": "STRIPE",
+      "eventId": "evt_conc_B_1788287781966",
+      "eventType": "invoice.paid",
+      "payload": {
+        "amount": 6200
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:36:21.967Z"
+    },
+    {
+      "id": "wh-1788287781966-A",
+      "provider": "ESCROW",
+      "eventId": "evt_conc_A_1788287781966",
+      "eventType": "disbursement.scheduled",
+      "payload": {
+        "dealId": "deal-1"
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:36:21.966Z"
+    },
+    {
+      "id": "wh-1788287781962-1",
+      "provider": "ESCROW",
+      "eventId": "evt_escrow_replay_1788287781962",
+      "eventType": "payment.funded",
+      "payload": {
+        "dealId": "deal-1",
+        "amount": 56000
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:36:21.962Z"
+    },
+    {
+      "id": "wh-1788287769129-B",
+      "provider": "STRIPE",
+      "eventId": "evt_conc_B_1788287769128",
+      "eventType": "invoice.paid",
+      "payload": {
+        "amount": 6200
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:36:09.129Z"
+    },
+    {
+      "id": "wh-1788287769128-A",
+      "provider": "ESCROW",
+      "eventId": "evt_conc_A_1788287769128",
+      "eventType": "disbursement.scheduled",
+      "payload": {
+        "dealId": "deal-1"
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:36:09.128Z"
+    },
+    {
+      "id": "wh-1788287769124-1",
+      "provider": "ESCROW",
+      "eventId": "evt_escrow_replay_1788287769124",
+      "eventType": "payment.funded",
+      "payload": {
+        "dealId": "deal-1",
+        "amount": 56000
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:36:09.124Z"
+    },
+    {
+      "id": "wh-1788287741899-B",
+      "provider": "STRIPE",
+      "eventId": "evt_conc_B_1788287741895",
+      "eventType": "invoice.paid",
+      "payload": {
+        "amount": 6200
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:35:41.899Z"
+    },
+    {
+      "id": "wh-1788287741895-A",
+      "provider": "ESCROW",
+      "eventId": "evt_conc_A_1788287741895",
+      "eventType": "disbursement.scheduled",
+      "payload": {
+        "dealId": "deal-1"
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:35:41.895Z"
+    },
+    {
+      "id": "wh-1788287741890-1",
+      "provider": "ESCROW",
+      "eventId": "evt_escrow_replay_1788287741890",
+      "eventType": "payment.funded",
+      "payload": {
+        "dealId": "deal-1",
+        "amount": 56000
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:35:41.890Z"
+    },
+    {
+      "id": "wh-1788287716394-B",
+      "provider": "STRIPE",
+      "eventId": "evt_conc_B_1788287716390",
+      "eventType": "invoice.paid",
+      "payload": {
+        "amount": 6200
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:35:16.394Z"
+    },
+    {
+      "id": "wh-1788287716390-A",
+      "provider": "ESCROW",
+      "eventId": "evt_conc_A_1788287716390",
+      "eventType": "disbursement.scheduled",
+      "payload": {
+        "dealId": "deal-1"
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:35:16.390Z"
+    },
+    {
+      "id": "wh-1788287716375-1",
+      "provider": "ESCROW",
+      "eventId": "evt_escrow_replay_1788287716375",
+      "eventType": "payment.funded",
+      "payload": {
+        "dealId": "deal-1",
+        "amount": 56000
+      },
+      "status": "PROCESSED",
+      "processedAt": "2026-09-01T18:35:16.375Z"
+    }
+  ],
+  "migrations": []
+}
