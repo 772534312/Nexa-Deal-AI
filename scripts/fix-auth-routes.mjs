@@ -4,8 +4,15 @@ import path from 'node:path';
 const file = path.resolve('server.ts');
 let source = fs.readFileSync(file, 'utf8');
 
+// secure-auth.mjs is the authoritative transformer. This step is retained as
+// a compatibility guard for older source revisions and must be idempotent.
+if (source.includes('NEXA_AUTH_HARDENING_APPLIED')) {
+  console.log('[Nexa auth routes] Authentication routes already hardened.');
+  process.exit(0);
+}
+
 function replaceOnce(label, oldText, newText) {
-  if (!source.includes(oldText)) throw new Error(`[Nexa auth routes] Missing pattern: ${label}`);
+  if (!source.includes(oldText)) throw new Error('[Nexa auth routes] Missing pattern: ' + label);
   source = source.replace(oldText, newText);
 }
 
