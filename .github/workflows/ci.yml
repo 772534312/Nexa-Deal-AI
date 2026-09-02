@@ -12,7 +12,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
@@ -31,3 +31,6 @@ jobs:
 
       - name: Typecheck hardened source
         run: npm run lint
+
+      - name: Production verification suite
+        run: npm test
