@@ -43,12 +43,6 @@ replaceOnce(
 );
 
 replaceOnce(
-  'onboarding synthetic description',
-  "    tagline: tagline || `${name} Platform`,\n    description: description || 'Digital asset submitted for M&A representation.',",
-  "    tagline: tagline || '',\n    description: description || '',"
-);
-
-replaceOnce(
   'escrow webhook signature bypass',
   "  // 1. Verify HMAC signature\n  if (!signature || (signature !== 'valid-escrow-signature-2026' && !signature.startsWith('sha256='))) {\n    logAuditEvent(wsId, 'Escrow Gateway', 'SYSTEM', 'ESCROW_WEBHOOK_REJECTED', 'Escrow.com', 'Rejected untrusted webhook: Invalid or missing HMAC signature.', 'DENIED');\n    return res.status(401).json({ error: 'INVALID_SIGNATURE', message: 'Webhook signature verification failed. SHA-256 HMAC invalid.' });\n  }",
   "  // 1. Verify HMAC signature against the exact raw request body.\n  const webhookSecret = process.env.ESCROW_WEBHOOK_SECRET;\n  const rawBody = (req as Request & { rawBody?: string }).rawBody || JSON.stringify(req.body);\n  if (!webhookSecret || !verifyWebhookSignature(rawBody, signature || '', webhookSecret)) {\n    logAuditEvent(wsId, 'Escrow Gateway', 'SYSTEM', 'ESCROW_WEBHOOK_REJECTED', 'Escrow.com', 'Rejected untrusted webhook: invalid/missing HMAC signature or server secret.', 'DENIED');\n    return res.status(401).json({ error: 'INVALID_SIGNATURE', message: 'Webhook signature verification failed.' });\n  }"
