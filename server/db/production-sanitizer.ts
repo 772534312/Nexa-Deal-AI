@@ -8,8 +8,10 @@ const DEMO_WORKSPACE_IDS = new Set(['ws-1', 'ws-2']);
  * legacy seed workspaces is safe and does not affect real accounts.
  */
 export function sanitizeProductionSeedData(state: DatabaseState): void {
-  if (process.env.NODE_ENV !== 'production' && process.env.NEXA_PRODUCTION_DATA_MODE !== 'true') return;
-  if (process.env.NEXA_ALLOW_DEMO_DATA === 'true') return;
+  const isProductionRuntime = process.env.NODE_ENV === 'production'
+    || process.env.RENDER === 'true'
+    || process.env.NEXA_PRODUCTION_DATA_MODE === 'true';
+  if (!isProductionRuntime || process.env.NEXA_ALLOW_DEMO_DATA === 'true') return;
 
   const demoProjectIds = new Set(state.projects.filter(p => DEMO_WORKSPACE_IDS.has(p.workspaceId)).map(p => p.id));
   const demoBuyerIds = new Set(state.buyers.filter(b => DEMO_WORKSPACE_IDS.has(b.workspaceId)).map(b => b.id));
@@ -35,7 +37,10 @@ export function sanitizeProductionSeedData(state: DatabaseState): void {
   state.offers = state.offers.filter(o => !demoDealIds.has(o.dealId) && !demoProjectIds.has(o.projectId) && !demoBuyerIds.has(o.buyerId));
   state.ndas = state.ndas.filter(n => !demoProjectIds.has(n.projectId) && !demoBuyerIds.has(n.buyerId));
   state.vdrAccessLogs = state.vdrAccessLogs.filter(v => !demoProjectIds.has(v.projectId) && !demoBuyerIds.has(v.buyerId));
-  state.dueDiligence = state.dueDiligence.filter(d => !String(d.id).startsWith('dd-'));
+  state.dueDiligence = state.dueDiligence.filter(d => {
+    const projectId = (d as any).projectId;
+    return !projectId || !demoProjectIds.has(projectId);
+  });
   state.handoverSecrets = state.handoverSecrets.filter(s => !demoProjectIds.has(s.projectId));
   state.brokerageEconomics = state.brokerageEconomics.filter(e => !demoDealIds.has(e.dealId));
   state.transactionArchives = state.transactionArchives.filter(a => !demoDealIds.has(a.dealId) && a.dealId !== 'deal-historical-0');
