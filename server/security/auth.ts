@@ -8,6 +8,14 @@ function hash(value: string): string {
   return crypto.createHash('sha256').update(value, 'utf8').digest('hex');
 }
 
+function readSessionToken(req: Request): string {
+  const auth = String(req.headers.authorization || '');
+  if (auth.startsWith('Bearer ')) return auth.slice(7).trim();
+  const cookieHeader = String(req.headers.cookie || '');
+  const match = cookieHeader.match(/(?:^|;\s*)nexa_session=([^;]+)/);
+  return match ? decodeURIComponent(match[1]) : '';
+}
+
 export function hashPassword(password: string): string {
   if (typeof password !== 'string' || password.length < 10 || password.length > 256) {
     throw new Error('Password must be between 10 and 256 characters.');
@@ -55,21 +63,17 @@ export function revokeSession(state: DatabaseState, token: string): void {
 }
 
 export function authenticateRequest(req: Request, state: DatabaseState): { user: any; workspace: any; session: UserSessionRecord } | null {
-  const auth = String(req.headers.authorization || '');
-  const token = auth.startsWith('Bearer ') ? auth.slice(7).trim() : '';
+  const token = readSessionToken(req);
   if (!token) return null;
-
   const tokenHash = hash(token);
   const session = state.sessions?.find(s => s.tokenHash === tokenHash && !s.revoked);
   if (!session || Date.parse(session.expiresAt) <= Date.now()) {
     if (session) session.revoked = true;
     return null;
   }
-
   const user = state.users.find(u => u.id === session.userId && u.workspaceId === session.workspaceId);
   const workspace = state.workspaces.find(w => w.id === session.workspaceId);
   if (!user || !workspace) return null;
-
   session.lastActivity = new Date().toISOString();
   return { user, workspace, session };
 }
